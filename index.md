@@ -12,7 +12,7 @@ permalink: /
 </div>
  <br/>
 <div align="center">
-<img width="500" height="500" src="https://github.com/Developers0101/notes-android-course/blob/main/images/home/home.jpg" alt="A image">
+<img width="500" height="500" src="https://github.com/Developers0101/notes-android-course/raw/main/images/home/home.jpg" alt="A image">
 </div>
 
 
