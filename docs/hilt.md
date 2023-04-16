@@ -819,7 +819,7 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 Hilt و Retrofit :
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image133.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image130.png)
 
 کتابخونه log interceptor به ما کمک میکنه بتونیم جزئیات بیشتری از api که داریم call میکنیم رو ببینیم.
 
@@ -827,23 +827,23 @@ Hilt و Retrofit :
 
 درکل ما با این کتابخونه میتونیم از api که داریم call میکنیم چه اوکی باشه چه با error روبرو بشه میتونیم log بگیریم و با جزئیات کامل همه چیزرو به ما نشون میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image134.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image131.png)
 
 میایم 3 تا پوشه api, model, module رو به پروژه مون اضافه میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image135.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image132.png)
 
 توی api services میایم و endpoint مون رو قرار میدیم.
 
 توی model هم همون مدلی که قبلاً توی retrofit کار کرده بودیم رو قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image136.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image133.png)
 
 بعد میایم و ماژول api مون رو هم مینویسیم و singleton میزاریم چون یک تنظیمات بیشتر برای ارتباط با سرور نداریم مثلاً بیایم توی هر صفحه ی یه base url داشته باشیم و بیایم توی اکتویتی a دیجی کالا رو داشته باشیم و توی activity b به دیوار api بزنیم و مثلاً توی activity c به اسنپ api بزنیم، چون اپمون یه دونه اس و تنظیماتمون هم یه دونه اس بخاطر همین میایم و از singleton استفاده میکنیم ولی تو مواقع خیلی خاص که چندین api داریم و نیاز داریم که اطلاعات مختلف از جاهای مختلف بیاد و نشون بدیم میایم بجای singleton از حالت های دیگه ایی استفاده میکنیم و برای هرکدوم از api ها یه تنظیمات خاص میزنیم که در 99% موارد ما فقط یه api داریم و اطلاعات از یکجا میاد.
 
 وابستگی هایی که توی retrofit و داخل api client نیاز داریم کدهایی که قبلاً زده بودیم رو بررسی میکنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image137.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image134.jpg)
 
 client به time وابستگی داره، چون تایم داره از جای دیگه ایی میاد، خود retrofit هم به 2 تا چیز دیگه وابستگی داره، 1- base url و 2- client .
 
@@ -851,21 +851,21 @@ client به time وابستگی داره، چون تایم داره از جای 
 
 به این حالت میشه نحوه ی وابستگی هارو تشخیص داد و یکی از بهترین راهای تشخیص وابستگی، trace کردن کدهاست، یعنی همین کاری که ما با retrofit انجام دادیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image138.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image135.png)
 
 ما میتونیم constants یا ثابت هارو هم بصورت فایل و هم بصورت object درست کنیم و هردو حالت درسته.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image139.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image136.png)
 
 Base url و time رو به constants مون اضافه میکنیم.
 
 Time برای مشخص کردن زمان time out شدن سرور نیاز داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image140.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image137.png)
 
 چون base url ما ثابت هست و عوض نمیشه singleton قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image141.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image138.png)
 
 Connection timeout رو هم singleton قرار میدیم.
 
@@ -875,7 +875,7 @@ Connection timeout رو هم singleton قرار میدیم.
 
 در اینجور مواقع میایم و یک بخشی رو به gson اضافه میکنیم، که بتونیم اون تنظیمات و option های خاص رو هم بتونیم ساپورت کنیم که بهش میگن lenient .
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image142.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image139.png)
 
 متدمون رو از نوع gson میزاریم و برای اینکه بتونیم از set lenient استفاده کنیم باید از حالت gson builder برای اضافه کردن تنظیمات خاص استفاده کنیم، که gson رو با حالت lenient درست میکنیم.
 
@@ -885,29 +885,29 @@ Connection timeout رو هم singleton قرار میدیم.
 
 برای log interceptor اکثراً در 80 تا 90 درصد مواقع از body استفاده میکنیم که میاد و بدنه اون response رو به ما میده، ولی اینجا ما هم از body و هم header استفاده میکنیم و جفتشون هم از یه جنس هستن و برای هرکدوم از named استفاده میکنیم که موقع استفاده مشخص باشن.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image143.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image140.jpg)
 
 متدمون رو از نوع Log interceptor http قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image144.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image141.jpg)
 
 یه بخش داره به اسم level ، که ما توی level سطح اون log یی که میخوایم رو میگیریم، مثلاً میگیم body رو به ما بده یا header رو به ما بده یا هرچیزی که نیاز داریم رو به ما بده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image145.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image142.jpg)
 
 که ما level رو از نوع headers انتخاب میکنیم.
 
 میایم و یه مدل دیگه هم از این log ولی برای body درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image146.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image143.jpg)
 
 الان ما هم header و هم body رو داریم که جفتشون از نوع okhhtp 3 و http logging interceptor هستن و چون یه نوع هست برای اینکه بتونیم ازشون استفاده کنیم باید از Named استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image147.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image144.png)
 
 میایم و براشون 2 تا اسم توی const تعریف میکنیم و به هرکدوم از متدها میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image148.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image145.jpg)
 
 
 
@@ -919,41 +919,41 @@ Connection timeout رو هم singleton قرار میدیم.
 
 client نیاز به یکسری موارد و وابستگی داره مثل time و ما برای اینکه بتونیم این وابستگی رو تامین کنیم باید اونرو توی constructor قرار بدیم، ما علاوه بر time به log header و log body interceptor نیاز داریم چون میان وضعیت api مارو با log نشون میدن که اوکی هست یا نه که میایم و اونهارو هم داخل constructor قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image149.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image146.png)
 
 Client رو singleton در نظر میگیریم، چون فقط میخوایم یکبار اجرا بشه.
 
 اولین موردی که در constructor قرار میدیم time هست که از نوع long هست، وقتی مینویسیم میره از بین متدهایی که برای تزریق وابستگی نوشته بودیم میبینه کدوم long هست و خودش میاد تشخیص میده:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image150.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image147.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image151.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image148.png)
 
 بعد میایم و header, body رو قرار میدیم که از نوع http log interceptor در نظر میگیریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image152.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image149.png)
 
 چون هردوتا از یک نوع بودن با استفاده از named میایم هرکدوم رو مشخص میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image153.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image150.png)
 
 بعد میایم و متدمون رو از نوع ok http client در نظر میگیریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image154.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image151.png)
 
 بعد میایم و interceptor هارو با add interceptor اضافه میکنیم و header, body رو بهش میدیم.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image155.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image152.png)
 
 بعد میایم و timeout هامون که شامل connection و read و write بود رو میدیم که از time که داخل constructor قرار دادیم استفاده میکنیم و مدت زمان و time unit رو بر حسب ثانیه در نظر میگیریم.
 
 ما میتونیم بعد همه ی این کدها از build استفاده کنیم و کارو تموم کنیم، ولی ok http به ما یه config و تنظیمات خوب میده، که میگه زمانی که با failed روبرو شد و به هر دلیلی سرور response رو به ما نداد، یکبار دیگه هم تلاش کن، و اگه بعد اون یکباری که خودت هم چک کردی و اگه اوکی نشد بیا و یه error یی رو به کاربر نشون بده.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image156.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image153.png)
 
 با retry on connection failure اگه مقدارشو true قرار بدیم زمانی که یکبار failed بشه میاد و یکبار دیگه خودش چک میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image157.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image154.png)
 
 و بعد میایم و build میکنیم.
 
@@ -965,35 +965,35 @@ Log body هم هرچیزی که کامل در قالب header هم میفرست�
 
 Retrofit نیاز داره به base url ، client ، و اگه تنظیمات خاصی برای gson در نظر گرفته باشیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image158.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image155.png)
 
 ` `میتونیم تو create بهش بدیم، که ما با set lenient براش تنظیمات خاص در نظر گرفتیم.
 
 وداخل ورودی constructor میایم و base url, client, gson ره بهش میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image159.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image156.png)
 
 چون retrofit هم یه کتابخونه ی سنگین هست اونو هم singleton مینویسیم تا فقط یکبار call بشه برای ما و ما وابستگی هارو به retrofit تزریق کردیم.
 
 زمانی که قبلاً داشتیم از api services توی retrofit استفاده میکردیم اونو تعریف کرده بودیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image160.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image157.png)
 
 و گفته بودیم برای اینکه بتونیم از تنظیمات api client مون استفاده کنیم اونو در قالب api services تعریف میکنیم، که وقتی اینطوری ازش استفاده کردیم یعنی یه وابستگی، و ما بجای اینکار میایم و همرو داخل ماژول و داخل خود retrofit تعریف میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image161.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image158.jpg)
 
 بخاطر همین میایم و نوع بازگشتی متد retrofit مون رو از نوع api services درنظر میگیریم، چون ما بواسطه ی این api services هست که میتونیم توی فرگمنت یا اکیتویتی call بزنیم، enqueue بزنیم و اطلاعات رو بگیریم و نشون بدیم.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image162.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image159.jpg)
 
 میایم و با استفاده از retrofit . builder و base url, client رو بهش میدیم و بعد میایم و بهش convertor رو بهش میدیم و اگه تنظیمات خاصی داشته باشیم میتونیم داخل create ش قرار بدیم که ما میایم و داخل create و gson رو بعنوان تنظیمات خاص بهش پاس میدیم و بعد build میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image163.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image160.jpg)
 
 ولی ما گفتیم که api services رو برای ما برگشت بده و دقیقاً همونطوری که قبلاً توی activity و retrofit رو تعریف میکردیم، تعریف میکنیم و داخل create کلاس api services رو بهش میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image164.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image161.jpg)
 
 تنظیمات کلی api ماژول مربوط به retrofit .
 
@@ -1001,25 +1001,25 @@ Retrofit نیاز داره به base url ، client ، و اگه تنظیمات �
 
 یه پوشه ی repository و یه کلاس api repository درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image165.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image162.png)
 
 داخل constructor api repository برای اینکه به endpoint مون دسترسی داشته باشیم باید اونو تعریف کنیم.
 
 private ش میکنیم چون فقط میخوایم اینجا تعریفش کنیم و val درنظر میگیریم که بهش دسترسی داشته باشیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image166.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image163.png)
 
 براش یه متد با نام دلخواه در نظر میگیریم و با استفاده از api به متد movies list مون که مربوط به اون endpoint مون میشه دسترسی پیدا میکنیم و قرار میدیم.
 
 الان ما از حالت عادی و بدون hilt استفاده کرده بودیم که با inject میایم و از hilt استفاده میکنیم و وابستگی رو تزریق میکنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image167.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image164.jpg)
 
 برای scope خود repository هم activity قرار بدیم بهتر، چون api های مختلف تو صفحات مختلف هستن و ازشون استفاده میکنیم، و مثلاً get all movies رو قرار در صفحه ی اول نشون بدیم که لیست همه ی فیلم هارو نشون بده، و یه api دیگه داریم که وقتی وارد جزئیات شدیم، میخوایم جزئیات اون فیلم رو نشون بدیم، و اگه این scope ش از نوع activity scope باشه خیلی بهتر، چون قرار یکسری از این api ها فقط توی یکسری از صفحات کار کنن، و اگه ننویسیم هم error یی نمیده.
 
 خلاصه توضیحات api repository, api module :
 
-اگه الان داخل کلاس api repository روی علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image168.jpg) بزنیم مارو میبره به api module و به متد retrofit چون داخل رتروفیت از api services استفاده کردیم و داخل ریپازیتوری مون به api services برای تامین اطلاعات نیاز داریم و به این شکل برای ما تامین کردن اطلاعات رو.
+اگه الان داخل کلاس api repository روی علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image165.png) بزنیم مارو میبره به api module و به متد retrofit چون داخل رتروفیت از api services استفاده کردیم و داخل ریپازیتوری مون به api services برای تامین اطلاعات نیاز داریم و به این شکل برای ما تامین کردن اطلاعات رو.
 
 ` `و api service اومد داخل متد رترفیت و کل رتروفیت رو تعریف کرده که رتروفیت برای تعریف نیاز به base url, gson, client داره.
 
@@ -1029,7 +1029,7 @@ private ش میکنیم چون فقط میخوایم اینجا تعریفش ک�
 
 بعد همه ی مواردی که نیاز بود رو برای ما تامین میکنه و بعد با api services داخل ریپازیتوری در اختیار ما قرار میده و ما در نهایت میتونیم ازش داخل کلاس activity مون استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image169.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image166.png)
 
 برای استفاده از اینترنت هم بهش دسترسی میدیم.
 
@@ -1039,63 +1039,63 @@ private ش میکنیم چون فقط میخوایم اینجا تعریفش ک�
 
 برای لیست فیلم هامون یه adapter نوشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image170.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image167.png)
 
 متد get item view type برای اینه که آیتم هامون duplicate نشه.(تکراری اول قسمت 14 بخش رتروفیت گفته شده)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image171.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image168.jpg)
 
 برای تامین وابستگی میایم و به adapter مون یه constructor میدیم و قبلش یه inject میزاریم.
 
 یه زمانی نیاز داریم که توی کلاس adapter از context استفاده کنیم، مثلاً زمانی که از glide برای بارگذاری تصاویر استفاده میکنیم نیاز به context داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image172.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image169.jpg)
 
 در حالت عادی و بدون استفاده از hilt به این صورت میومدیم و context رو تعریف میکردیم و بعد از parent میگرفتیم یا:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image173.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image170.jpg)
 
 یا میتونستیم توی constructor تعریفش کنیم و بعد هرجا که میخواستیم ازش استفاده کنیم تو constructor میومدیم و context رو بهش میدادیم.
 
 ولی این روش ها مناسب نیستن و وابستگی داره و ما از هیلت استفاده میکنیم که وابستگی هارو برامون تامین کنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image174.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image171.jpg)
 
 اگه نیاز به context داشته باشیم به اینصورت میایم و با application context وابستگیمون رو تامین میکنیم.
 
 الان ما برای استفاده از retrofit و نمایش اطلاعاتمون توی activity به 2تا وابستگی نیاز داریم که اولی adapter هست و دومی repository که عملیات مارو برای api انجام داده که ما بتونیم دسترسی داشته باشیم و کارهای api رو انجام بدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image175.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image172.png)
 
 قبلاً برای دسترسی به api میومدیم و با lazy اونو تعریف میکردیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image176.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image173.png)
 
 و بعد به این صورت ازش استفاده میکردیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image177.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image174.png)
 
 ولی الان و با استفاده از hilt دیگه نیازی نیست که به این صورت تعریف بشه و بعد داخل متغییر call movies api قرار بدیم، بلکه با استفاده از repository و بصورت مستقیم ازش استفاده میکنیم:
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image178.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image175.jpg)
 
 با استفاده از repository میایم و متد get all movies رو میزنیم و داخل enqueue نیاز به object داریم که ازنوع callback هست و Callback یی که انتخاب میکنیم حتماً باید از نوع retrofit 2 باشه.
 
 همه ی کدها تکراری هست و درقسمت رتروفیت زده شده و توضیحات کامل داده شده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image179.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image176.jpg)
 
 فقط در قسمت on failure میایم و از loge استفاده میکنیم و یه tag درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image180.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image177.jpg)
 
 کل کدهایی که در activity زدیم.
 
 برای اینکه بتونیم موقع load شدن تصاویر یه حالت افکت بهش بدیم که جزء lambda expression ها هست و از cross fade که یه حالت محو شدن داره برای بارگذاری تصاویر استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image181.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image178.png)
 
 Cross fade 2 تا آیتم داره که باید اولی رو true کنیم تا نشون بده و دومی زمان هست برحسب میلی ثانیه که اگه ندیم خودش بصورت پیشفرض که 500 میلی ثانیه هست استفاده میکنه.
 
@@ -1109,45 +1109,45 @@ Cross fade 2 تا آیتم داره که باید اولی رو true کنیم ت
 
 ما 2تا activity داریم که با زدن یک دکمه از activity home میریم به profile و با log مشخص کنیم که برای scope بصورت singleton یا activity چه اتفاقی میفته.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image182.jpg)  
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image179.jpg)  
 
 میایم برای api service که قبلاً داشتیم و بصورت activity scoped بود استفاده میکنیم و هیچ فرقی نداره میتونیم از متدهای داخل module استفاده کنیم یا از adapter و هیچ فرقی نداره.
 
 میایم و api repository رو 2بار در activity home و 2بار هم در activity profile تعریف میکنیم و اگه یکبار تعریف کنیم یه بلوک در رم براش ذخیره میشه که مشخص نمیشه که به ازای هر تعریف در رم یکسان ذخیره میشه یا نه بخاطر همین با 2 تا اسم مختلف ذخیره میکنیم تا نتیجه مشخص بشه، که یکسان هستن یا نه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image183.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image180.png)
 
 بعد همین 2تا inject رو در activity profile هم قرار میدیم.
 
 برای اینکه بفهمیم چیزهایی که توی رم ذخیره شده همون location هستن، کاتلین یک کدی به ما میده به اسم hash code که ما توسط hash code میتونیم بفهمیم location مون توی رم یکی هست یا نه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image184.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image181.png)
 
 میایم و توی constants یه tag درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image185.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image182.png)
 
 میایم و با استفاده از loge و hash code های repository 1,2 رو میگیریم و به string تبدیل میکنه تا نشون بده در logcat .
 
 میخوایم ببینیم که به ازای هرکدوم از متغییرهایی که تعریف کردیم یه بلوک در رم رو به خودش اختصاص میده یا برای هردوتا یکی هست.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image186.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image183.jpg)
 
 بعد براش یه intent مینویسیم که بریم به activity profile .
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image184.jpg)
 
 وقتی اجرا میگیریم میاد و api repository 1,2 رو عین هم چاپ میکنه و hash code هاشون یکی هست و اگه 1000 تای دیگه هم داشته باشیم hash code همشون یکی هست و محل ذخیره همشون توی رم یکی هست.
 
 حالا میخوایم بواسطه زدن دکمه بریم به activity دوم و چون برای repository از activity scoped استفاده کردیم باید hash code های activity 1,2 باهم فرق داشته باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image185.jpg)
 
 چون یه scope یا محدوده ی اجرایی برای activity1 در نظر میگیره و وقتی از این صفحه میریم به صفحه ی بعد این activity stop میشه و چرخه ی حیاتش هم on stop میشه و چون در activity 2 یه activity دیگه میاد و create میشه، و وقتی یه اکتیویتی جدید ساخته شد، میاد و یه hash code جدید میسازه، چون scoped مون براساس activity هست.
 
 بخاطر همین hash code های home activity با profile activity باهم فرق دارن و به ازای هر activity یه دونه object از api repository برای ما ساخته میشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image186.jpg)
 
 میایم و scope کلاس api repository رو به singleton تغییر میدیم و اجرا میگیریم.
 
