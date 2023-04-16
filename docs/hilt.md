@@ -719,7 +719,7 @@ Component رو نمیتونیم خارج از ماژول بزنیم، چون م�
 
 میایم هر 3 مورد رو inject میکنیم و حتماً حتماً باید @Andoid Entry Point رو هم بهش بدیم وگرنه هیچکدوم از inject ها و وابستگی هارو نمیشناسه و کرش میکنه.
 
-روی هرکدوم از علامت ها ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image113.png) میزنیم دقیقاً وارد کلاسش میشه و constructor اون کلاس هارو نشون میده، هرچند مثلconstructor adapter  خالی باشه، بخاطر همین به constructor ها نیاز داریم.
+روی هرکدوم از علامت ها ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image113.png) میزنیم دقیقاً وارد کلاسش میشه و constructor اون کلاس هارو نشون میده، هرچند مثلconstructor adapter  خالی باشه، بخاطر همین به constructor ها نیاز داریم.
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image114.png)
 
@@ -803,7 +803,7 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 حالا داخل activity مون و با استفاده از adapter به متد set on item دسترسی داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image128.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image128.jpg)
 
 بعد میایم و داخلش هرکاری که نیاز هست رو انجام میدیم، مثلاً یه toast مینویسیم.
 
