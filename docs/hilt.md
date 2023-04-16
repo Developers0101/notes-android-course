@@ -467,7 +467,7 @@ Named : بجای Qualifiers میتونیم از Named استفاده کنیم ک
 
 به این صورت و در ثابت ها میایم برای هرکدوم یه اسم انتخاب میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image072.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image072.png)
 
 موقع استفاده در اکتیویتی هم میایم و به این صورت استفاده میکنیم و با named مشخص میکنیم.
 
