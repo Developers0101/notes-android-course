@@ -615,7 +615,7 @@ Entity رو از نوع data class تعریف میکنی و داخلش 2 تا م
 
 وقتی که ما default value ست میکنیم میره برای ساختنشون از default value استفاده میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image097.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image097.jpg)
 
 ما اومدیم و وابستگی های کلاس دیتابیسمون رو درست کردیم.
 
@@ -627,13 +627,13 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 برای اینکه کدهامون شلوغ نشه یه package دیگه به اسم repository درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image098.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image098.png)
 
 میایم و کلاس db repository درست میکنیم.
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image099.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image099.png)
 
 این repository برای اینکه اطلاعات رو تامین کنه و در اختیار ما قرار بده نیاز به dao (note dao) داره، چون اطلاعات ما توسط note dao کنترل میشن مثلاً ذخیره، آپدیت، گرفتن، دیلیت و ... که داخل dao قرار داره و repository برای تامین این اطلاعات نیاز داره به dao دسترسی داشته باشه که اونو توی ورودی constructor repository قرار میدیم و میتونیم ازش استفاده کنیم.
 
@@ -641,7 +641,7 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 جاهایی که میخوایم ورودی و constructor داشته باشیم و اونو قبلاً تامین کردیم یا میخوایم تامین کنیم، نباید بیام مستقیماً داخل constructor و بعد براش ورودی set کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image100.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image100.png)
 
 برای تزریق وابستگی میایم و قبل از سازنده یا constructor کلاس و از @inject استفاده میکنیم.
 
