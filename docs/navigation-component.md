@@ -1,8 +1,9 @@
 ---
 layout: default
-title: نویگیشن کامپونینت
+title: 5- نویگیشن کامپونینت
 nav_order: 5
 ---
+# 5- استفاده از navigation component
 قسمت 16:
 
 زمانی از navigation component استفاده میکنیم که بخوایم با fragment ها کار کنیم.
