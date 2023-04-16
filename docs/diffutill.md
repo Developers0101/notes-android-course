@@ -1,12 +1,12 @@
 ---
 layout: default
-title: دیفیوتیل
+title: 2- دیفیوتیل
 nav_order: 4
 ---
 
 قسمت 2
 
-# Diff utils
+# 2- Diff utils
 
 استفاده از notify data set change در adapter recycler view اصولی نیست چون فشار زیادی به سخت افزار وارد میکنه و روش جایگزین که بهترین روش هست diff utils هست.
 
