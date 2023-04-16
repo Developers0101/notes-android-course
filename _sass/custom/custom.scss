@@ -8,11 +8,17 @@
 
 body {
   font-family: 'vazir' !important;
+  background-color: ##27262b;
 }
-
+p, h1{
+ color: white; 
+}
 .main-content-wrap{
   direction: rtl;
 }
 .site-nav, .site-header, .site-footer {
     direction: rtl;
+}
+.site-tite{
+  font-size: 16px !important;
 }
