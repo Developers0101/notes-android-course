@@ -645,7 +645,7 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 برای تزریق وابستگی میایم و قبل از سازنده یا constructor کلاس و از @inject استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image101.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image101.png)
 
 با اینکار اون متد dao که داخل ماژولمون تعریف کرده بودیم رو تزریق کردیم، که داخل     constructor repository نیاز به note dao داشتیم که note dao رو تو ماژول provide کرده بودیم و خود note dao نیاز به note database داره که اونو هم همونجا provide کرده بودیم و بهش دادیم و همینطور سلسله وار میره جلو.
 
@@ -653,7 +653,7 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 که 2تا query save, get all داشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image105.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image102.png)
 
 برای ورودی constructor باید از نوع val در نظر بگیریم و گرنه داخل کلاس نمیتونیم از dao استفاده کنیم.
 
@@ -665,37 +665,37 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 میخوایم از hilt داخل adapter استفاده کنیم که نیایم و adapter رو مستقیم تعریف کنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image106.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image103.png)
 
 اینجا اومدیم و adapter رو هرچند بصورت lazy ، تعریف کردیم و بهش وابستگی داریم و داریم initialize ش میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image107.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image104.jpg)
 
 میایم و با @inject داخل constructor و تزریق میکنیم وابستگیمون رو.
 
 زمانی که میخوایم برای یک کلاس وابستگی رو تزریق کنیم، چه constructor داشته باشه و چه نداشته باشه، ما باید بهش constructor رو اضافه کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image108.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image105.jpg)
 
 اگه constructor نزاریم inject رو قبول نمیکنه و error میده.
 
 برای اینکه مستقیماً note adapter رو تعریف نکنیم میایم و بهش constructor میدیم هرچند بصورت خالی باشه و هیچ مشکلی نداره و روش استفاده اش همینه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image109.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image106.png)
 
 ما میتونیم حتی کلاس ها و مواردی که داخل ماژول نیستن رو هم singleton یا activity scope ،       fragment scope یا view model scope بزنیم و استفاده کنیم و نیاز نیست حتماً داخل ماژول باشه تا بتونه singleton یا بقیه موارد باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image110.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image107.png)
 
 Component رو نمیتونیم خارج از ماژول بزنیم، چون مخصوص @install in هست و محدوده ی خود ماژول رو مشخص میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image111.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image108.jpg)
 
 میتونیم adapter مون رو singleton کنیم که در طول اجرای اکتیوتی یه بار ساخته بشه و همونو نشون بده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image112.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image109.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image113.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image110.png)
 
 یا حتی میتونیم از activity scope یا fragment scope هم استفاده کنیم.
 
