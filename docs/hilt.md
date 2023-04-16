@@ -701,7 +701,7 @@ Component رو نمیتونیم خارج از ماژول بزنیم، چون م�
 
 ما حتی میتونیم adapter رو داخل ماژول تعریف کنیم ولی چون ماژولمون db بود و مربوط به دیتابیس بود بخاطر همین adapter رو داخل ماژول قرار ندادیم، و همین که ممکن ما یه کلاسی(adapter) داشته باشیم که وابستگی داره به یه سری چیزهای دیگه، که اومدیم وابستگی خود کلاس (adapter) رو هم تامین کردیم، بخاطر همین توی ماژول ننوشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image114.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image111.png)
 
 و حتی میتونیم repository رو هم بصورت singleton تعریف کنیم.
 
@@ -715,37 +715,37 @@ Component رو نمیتونیم خارج از ماژول بزنیم، چون م�
 
 1- adapter 2- repository : چون ریپازیتوری میاد و عملیات های ما مثل ذخیره کردن، آپدیت، دیلیت کردن و گرفتن اطلاعات رو برای ما تامین میکنه.3- نیاز به مدل (note model) داریم تا بتونیم اطلاعات رو ذخیره کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image115.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image112.png)
 
 میایم هر 3 مورد رو inject میکنیم و حتماً حتماً باید @Andoid Entry Point رو هم بهش بدیم وگرنه هیچکدوم از inject ها و وابستگی هارو نمیشناسه و کرش میکنه.
 
-روی هرکدوم از علامت ها ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image116.png) میزنیم دقیقاً وارد کلاسش میشه و constructor اون کلاس هارو نشون میده، هرچند مثلconstructor adapter  خالی باشه، بخاطر همین به constructor ها نیاز داریم.
+روی هرکدوم از علامت ها ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image113.png) میزنیم دقیقاً وارد کلاسش میشه و constructor اون کلاس هارو نشون میده، هرچند مثلconstructor adapter  خالی باشه، بخاطر همین به constructor ها نیاز داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image117.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image114.png)
 
 چون entity رو inject کردیم و initialize شده دیگه نیازی نیست مجدداً  اینطوری بنویسیم و دوباره initialize کنیم بعد بیایم و به note model مقدار بدیم، البته میتونیم با همین روش هم بریم، یا میتونیم مستقیم ازش استفاده کنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image118.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image115.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image119.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image116.png)
 
 میتونیم مقداری که میخوایم رو مستقیماً، توی خودش ذخیره کنیم ولی باید بیایم و note model مون مواردش رو به var تغییر بدیم وگرنه error میده، چون میخوایم دوباره مقدار دهی کنیم و نباید val باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image120.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image117.png)
 
 میایم و id رو 0 میزاریم چون auto generate هست خودش بهش اضافه میشه و title رو هم از edit text مون میگیریم بعد اینکه entity رو پر کردیم میریم و از طریق repository ذخیره میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image121.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image118.png)
 
 بعد اینکه کاربر روی save زد میایم و edit text رو خالی میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image122.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image119.png)
 
 اومدیم با استفاده از adapter و با repository اطلاعات رو گرفتیم و بعد recycler view رو هم set میکنیم.
 
 وقتی برنامه اجرا میشه و چیزی مینویسیم و دکمه save رو میزنیم برنامه ذخیره میکنه و چیزی نشون نمیده که باید دوباره اجرا کنیم تا نشون بده:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image123.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image120.png)
 
 برای حل این مشکل و اینکه همون لحظه به لیست اضافه کنه میایم و adapter رو همونجایی که روی دکمه save کلیک شد قرار میدیم تا در لحظه نشون بده.
 
@@ -765,13 +765,13 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 1- متغییری که توسط این متغییر میتونیم اطلاعاتی که میخوایم رو بگیریم و در نهایت اونرو در قالب interface بفرستیم و از lambda expression ها استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image124.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image121.png)
 
 یه متغییر به اسم on item click listener مینویسیم، چون میخوایم اطلاعات هر آیتم هم فرستاده بشه میایم و model مون رو هم میفرستیم که بصورت unit مینویسیم که یعنی، مقدار بازگشتی نداره و معادل void جاوا هست و براش امکان null بودن رو هم درنظر میگیریم.
 
 2- نیاز به یه function داریم تا بتونیم از متغییرمون استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image125.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image122.png)
 
 که براش یه اسم(set on item click listener) در نظر میگیریم که از ما یه listener میخواد، بعد از ما lambda expression یی که بالا نوشته بودیم رو میخواد و میایم بهش همون مدلمون (note model)
 
@@ -781,29 +781,29 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 الان براحتی ما روی هر آیتم که کلیک کنیم و توی activity از متد set on item click listener استفاده کنیم، بواسطه متغییر on item click listener هر آیتمی که انتخاب بشه چون مقدار note model رو داریم برامون برمیگردونه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image126.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image123.png)
 
 میریم داخل inner class و داخل متد set data و کلیک رو مینویسیم و با استفاده از متغییر on item click listener میگیم اگه null نبود که از let استفاده میکنیم که همون note model رو برای ما برمیگردونه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image127.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image124.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image128.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image125.png)
 
 که با it که همون note model ماست میایم براش note یا یه دونه آیتم از لیستمون رو میفرستیم.
 
 خلاصه توضیحات برای interface مون که برای کلیک نوشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image129.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image126.png)
 
 اومدیم یه متغییر on item click listener درست کردیم که تقریباً کار listener مارو انجام میده و داخلش کلاس note model مون رو میخوایم انتقال بدیم، که میگیم بصورت unit باشه و مقدار برگشتی نداره، بعد میایم یه متد set on item click listener مینویسیم که بتونیم جای دیگه مثلاً توی فرگمنت یا اکتیویتی دیگه بتونیم ازش استفاده کنیم و بعد اومدیم داخل متدمون و اون متغییر item click رو مقدار دهی کردیم، بعد میگیم زمانی که روی آیتم recycler view کلیک شد و میخوایم اطلاعات رو بفرستیم میایم و متغییر on item click رو با استفاده از مدلمون هر item یی که کلیک شد رو پر میکنیم و مقدارشو میگیریم، و هرجا از متد set on item استفاده کنیم، چون listener مون رو با on item click مقدار دهی کردیم، خیلی راحت میتونیم ازش استفاده کنیم.
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image130.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image127.png)
 
 حالا داخل activity مون و با استفاده از adapter به متد set on item دسترسی داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image131.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image128.png)
 
 بعد میایم و داخلش هرکاری که نیاز هست رو انجام میدیم، مثلاً یه toast مینویسیم.
 
@@ -811,7 +811,7 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 این یکی از بهترین روش ها برای هندل کردن عملیات کلیک هست که با hilt هم سازگاری داره.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image132.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image129.jpg)
 
 
 
