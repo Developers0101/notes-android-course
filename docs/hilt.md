@@ -361,13 +361,13 @@ Inject از طریق نوع data type که از نوع string هست تونست 
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image053.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image053.png)
 
 به این صورت میتونیم ازش استفاده کنیم و username رو set میکنیم.
 
 ما برای اینکه اطلاعات username رو نشون بدیم، object main module رو تعریف نکردیم در صورتی که اگه از تزریق وابستگی استفاده نمیکردیم باید میومدیم ماژول main رو تعریف میکردیم و initialize میکردیم و بعد مقدار دهیش میکردیم، مثل کاری که قبلاً برای قسمت دیتابیس انجام داده بودیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image054.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image054.jpg)
 
 که اول کلاس مدل یا entity مون رو اینجا تعریف کردیم:
 
@@ -381,7 +381,7 @@ Inject از طریق نوع data type که از نوع string هست تونست 
 
 تو ماژول main یه متد دیگه تعریف میکنه که از نوع string هست و براش scope یا محدوده اجرا شونده در نظر نگرفتیم و متد رو به حالت دوم که return داره تعریف کردیم که هیچ فرقی نداره، چون در هردو حالت string داره return میشه.
 
-وقتی رو علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image057.jpg) استفاده شده متدهامون میزنیم هردو علامت مارو به متغییر username که در کلاس activity مون تعریف کرده بودیم میبرن که دوتا متد از نوع string داریم با یه متغییر:
+وقتی رو علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image048.png) استفاده شده متدهامون میزنیم هردو علامت مارو به متغییر username که در کلاس activity مون تعریف کرده بودیم میبرن که دوتا متد از نوع string داریم با یه متغییر:
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image058.png)
 
