@@ -383,19 +383,19 @@ Inject از طریق نوع data type که از نوع string هست تونست 
 
 وقتی رو علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image048.png) استفاده شده متدهامون میزنیم هردو علامت مارو به متغییر username که در کلاس activity مون تعریف کرده بودیم میبرن که دوتا متد از نوع string داریم با یه متغییر:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image058.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image057.png)
 
 وقتی اجرا میگیریم برنامه کرش میکنه:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image059.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image058.jpg)
 
 bound multiple times یعنی از یه چیزی چندتا دونه پیدا کرده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image060.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image059.png)
 
 که میگه از provide nick name و provide user name رو پیدا کرده:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image061.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image060.png)
 
 که ما میخوایم توی username بیایم و inject کنیم ولی میخوایم کدوم رو inject کنیم و تزریق کنیم.
 
