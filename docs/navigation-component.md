@@ -8,7 +8,7 @@ nav_order: 6
 
 زمانی از navigation component استفاده میکنیم که بخوایم با fragment ها کار کنیم.
 
-` `فرگمنت back نداره.
+فرگمنت back نداره.
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%86%D9%88%DB%8C%DA%AF%DB%8C%D8%B4%D9%86%20%DA%A9%D8%A7%D9%85%D9%BE%D9%88%D9%86%D9%86%D8%AA_files/image001.png)
 
@@ -122,7 +122,7 @@ Layout هم اسم لایه xml فرگمنتمون رو نشون میده و ا�
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%86%D9%88%DB%8C%DA%AF%DB%8C%D8%B4%D9%86%20%DA%A9%D8%A7%D9%85%D9%BE%D9%88%D9%86%D9%86%D8%AA_files/image023.png)
 
-برای اینکه بتونیم back رو هندل کنیم میایم و خارج از on create متد on navigation up که از متدهای خود navigation هست رو اضافه میکنیم و nav controller رومون رو توش قرار میدیم و با navigate up میتونیم back رو هرچندتا صفحه که باشه هندل کنیم و بعدش از علامت || استفاده میکنیم.
+برای اینکه بتونیم back رو هندل کنیم میایم و خارج از on create متد on navigation up که از متدهای خود navigation هست رو اضافه میکنیم و nav controller رومون رو توش قرار میدیم و با navigate up میتونیم back رو هرچندتا صفحه که باشه هندل کنیم و بعدش از علامت ```||``` استفاده میکنیم.
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%86%D9%88%DB%8C%DA%AF%DB%8C%D8%B4%D9%86%20%DA%A9%D8%A7%D9%85%D9%BE%D9%88%D9%86%D9%86%D8%AA_files/image024.png)
 
