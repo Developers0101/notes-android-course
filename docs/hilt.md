@@ -210,17 +210,16 @@ Qualifier و Named : مثلاً ما 2 string داریم یه جا به اسم M
 برای اینکه بتونیم از hilt استفاده کنیم این 2تا کتابخونه رو به قسمت dependency های gradle module اضافه میکنیم.
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image030.png)
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image031.jpg)
 
 چون توی dependency از kapt استفاده کردیم میایم و توی plugin هم kotlin kapt رو قرار میدیم و باید hilt رو هم به plugin اضافه کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image032.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image031.jpg)
 
 بعد این خط کد رو هم میایم و به gradle project یا اصلی مون اضافه میکنیم.
 
 ما کلاً 2 تا gradle داریم که یکی در قالب ماژول که میشه gradle module  که همه ی کتابخونه ها و dependency هارو بهش اضافه میکنیم و دومی هم میشه gradle project که هرچیزی که مربوط به کل پروژه میشه رو اضافه میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image033.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image032.png)
 
 ما اینجا چندین gradle module داریم ولی کلاً فقط یه gradle project داریم.
 
@@ -230,23 +229,23 @@ Qualifier و Named : مثلاً ما 2 string داریم یه جا به اسم M
 
 مثلاً برای اعمال فونت روی کل پروژه میتونیم از calligraphy توی کلاس application استفاده کنیم و روی کل پروژه اعمال میشه، یا بخوایم از firebase ها استفاده کنیم و یا ... رو تو کلاس application تعریف میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image034.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image033.png)
 
 میایم و کلاس My app مون از کلاس Application مون ارث بری میکنیم.
 
 با @Hilt Android App میاد و hilt رو به کل اپلیکیشن ما میشناسونه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image035.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image034.png)
 
 بعد از این که کلاس application رو ساختیم باید اونو توی manifest اونو تعریف کنیم.
 
 و داخل تگ application با name میایم و کلاس application مون رو بهش میدیم و با name هرچندتا که کلاس application داشته باشه رو نشون میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image036.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image035.png)
 
 بعد اینکار کلاس application ما جزء تنظیمات عمومی کل اپلیکیشن شده و hilt رو هم میشناسه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image037.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image036.png)
 
 اگه داخل set content view از binding. root استفاده نکنیم، هر view ایی که ست کنیم، مثلاً بواسطه ی کلیک روی یک دکمه هیچ اتفاقی نمیفته و عملاً view ها کار نمیکنن.
 
@@ -254,21 +253,22 @@ Qualifier و Named : مثلاً ما 2 string داریم یه جا به اسم M
 
 ما میایم و وابستگی هارو توی یه کلاس یا فایل به اسم module مینویسیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image038.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image037.png)
+
 
 و یه پوشه درست میکنیم به اسم di که مخفف dependency injection هست و ما ممکن تو یه پروژه کلی di های مختلف داشته باشیم بخاطر همین بهتر براش یه پوشه بسازیم و هرچقدر که ماژول داریم رو داخل این پوشه di قرار بدیم تا یک کلاس منسجم و جامع باشه.
 
 ما نیاز به module داریم، ماژول میاد چیزهایی که provide(provide میومد وابستگی هارو برای ما مهیا میکرد) هستن رو، میاد وابستگی هاش رو برای ما تامین میکنه و هرچیزی که میخوایم وابستگی هارو برای ما provide یا مهیا کنه رو داخلش مینویسیم، پس نیاز داریم به یک ماژولی که این وابستگی که ما داریم و میخواد یک اسمی رو برای ما بفرسته رو مهیا یا provide کنیم، که اینکار توسط یک ماژول به هر اسم دلخواهی که خواستیم انجام میشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image039.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image038.png)
 
 میایم و داخل پوشه di و یه Object به اسم (Main Module) دلخواه میسازیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image040.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image039.png)
 
 با استفاده از @Module کلاس یا فایل ما تبدیل میشه به ماژول و بهتر که از نوع object باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image041.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image040.png)
 
 زمانی که میخوایم از module استفاده کنیم باید محدوده ی اجرایی ماژول رو هم مشخص کنیم، که میایم از @install in استفاده میکنیم و بعد داخلش محدوده ماژول رو با sigletone مشخص میکنیم.
 
@@ -281,8 +281,7 @@ Singleton یعنی تا زمانی که این اپلیکیشن ما اجراس�
 ما یه وابستگی داریم که میخوایم اسممون رو توش نشون بدیم.
 
 
-
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image042.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image041.png)
 
 میایم و براش یه function میسازیم، و اکثراً چون مهیا یا provide میکنه، چیزهایی که توی module مینویسن با provide شروع میشه، ولی در کل نامگذاری متدش دلخواه.
 
@@ -290,7 +289,7 @@ Singleton یعنی تا زمانی که این اپلیکیشن ما اجراس�
 
 مثلاً رتروفیت یا روم چون میدونیم به چه صورتی میخوایم تعریف کنیم بصورت provide مینویسیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image043.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image042.png)
 
 هرچیزی که میخوایم ماژول برامون مهیا کنه از @Provides استفاده میکنیم.
 
@@ -310,7 +309,7 @@ Singleton یعنی تا زمانی که این اپلیکیشن ما اجراس�
 
 و یا کلاً میتونیم برای متدمون اصلاً محدوده ایی مشخص نکنیم.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image044.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image043.png)
 
 Singleton component بالا برای @install in و با @singleton پایین که برای @provides هست فرق داره.
 
@@ -320,83 +319,83 @@ Singleton component بالا برای @install in و با @singleton پایین 
 
 قسمت 34
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image045.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image044.png)
 
 برای اینکه activity یا fragment بتونه از گراف هایی hilt پشتیبانی کنه مثلاً بتونه inject, qualifier, named رو بشناسه، باید بالای اون فرگمنت یا اکتیویتی از @Android Entry point استفاده کنیم.
 
 الان اکتیویتی ما دیگه کلیات مربوط به hilt رو میشناسه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image046.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image045.png)
 
 ما چیزی که @provide شده رو با @inject میتونیم تزریق کنیم به activity مون.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image047.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image046.png)
 
 حتماً باید چیزهایی که در قالب متغییر استفاده میکنیم بصورت lateinit باشه و اگه val باشه error میده، و هیچ کدوم از چیزها نباید بصورت private تعریف بشه.
 
 که میایم و یه متغییر بصورت string تعریف میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image048.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image047.png)
 
-وقتی از این متد provides شده، با inject توی اکتیویتی استفاده کردیم همچین علامتی ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image049.png) کنارش میاد که یعنی استفاده شد.
+وقتی از این متد provides شده، با inject توی اکتیویتی استفاده کردیم همچین علامتی ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image048.png) کنارش میاد که یعنی استفاده شد.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image050.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image049.png)
 
 اگه val کنیم error میده بخاطر همین حتماً باید lateinit تعریف کنیم، که خودش که داره inject میکنه، میاد و مقداردهی میکنه و بهمون میده و میتونیم ازش استفاده کنیم.
 
 Inject از طریق نوع data type که از نوع string هست تونست تشخیص بده که این متغییر username ما همون متد provide username هست که داخل ماژولمون تعریف کرده بودیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image051.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image050.png)
 
 میگه این متد provide username ما همون string هست و مقدار بازگشتیش از نوع string هست.
 
 در واقع این متد بالا که به صورت تک خطی تعریف کرده بودیم به اینصورت هست و از نوع string هست و داره string رو برمیگردونه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image052.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image051.png)
 
 وقتی این متد رو به این صورت نوشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image053.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image052.png)
 
 توی inject همچین علامتی میاد چون توی provide username نوعش رو مشخص کرده بودیم که string هست و با نوع inject که string هست یکی هست میاد و اون رو نشون میده و اگه به حالت اول برگردونیم که نوع متد provide مشخص نیست این علامت هم از بین میره که چیز مهمی نیست و مشکلی نداره.
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image054.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image053.jpg)
 
 به این صورت میتونیم ازش استفاده کنیم و username رو set میکنیم.
 
 ما برای اینکه اطلاعات username رو نشون بدیم، object main module رو تعریف نکردیم در صورتی که اگه از تزریق وابستگی استفاده نمیکردیم باید میومدیم ماژول main رو تعریف میکردیم و initialize میکردیم و بعد مقدار دهیش میکردیم، مثل کاری که قبلاً برای قسمت دیتابیس انجام داده بودیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image055.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image054.png)
 
 که اول کلاس مدل یا entity مون رو اینجا تعریف کردیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image056.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image055.png)
 
 و بعد اومدیم initialize و مقداردهیش کردیم.
 
 ولی با تزریق وابستگی دیگه نیاز به این کارها نبود و مستقیماً ازشون استفاده نکردیم و هرموقع که بخوایم میتونیم داخل ماژولمون بیایم و براحتی مقدارشو تغییر بدیم بدون اینکه داخل اکتیویتیمون نیازی به تغییر دادن چیزی باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image057.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image056.png)
 
 تو ماژول main یه متد دیگه تعریف میکنه که از نوع string هست و براش scope یا محدوده اجرا شونده در نظر نگرفتیم و متد رو به حالت دوم که return داره تعریف کردیم که هیچ فرقی نداره، چون در هردو حالت string داره return میشه.
 
-وقتی رو علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image058.jpg) استفاده شده متدهامون میزنیم هردو علامت مارو به متغییر username که در کلاس activity مون تعریف کرده بودیم میبرن که دوتا متد از نوع string داریم با یه متغییر:
+وقتی رو علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image057.jpg) استفاده شده متدهامون میزنیم هردو علامت مارو به متغییر username که در کلاس activity مون تعریف کرده بودیم میبرن که دوتا متد از نوع string داریم با یه متغییر:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image059.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image058.png)
 
 وقتی اجرا میگیریم برنامه کرش میکنه:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image060.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image059.png)
 
 bound multiple times یعنی از یه چیزی چندتا دونه پیدا کرده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image061.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image060.png)
 
 که میگه از provide nick name و provide user name رو پیدا کرده:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image062.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image061.png)
 
 که ما میخوایم توی username بیایم و inject کنیم ولی میخوایم کدوم رو inject کنیم و تزریق کنیم.
 
@@ -410,37 +409,37 @@ Qualifiers : یعنی درسته که 2 یا چندتا چیز داریم ولی
 
 چون مربوط به dependency injection میشه میایم و توی پوشه ی di و یه پوشه ی جدید به اسم Qualifiers درست میکنیم چون ممکن چندین Qualifiers داشته باشیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image063.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image062.png)
 
 بعد داخل پوشه Qualifier میایم و یک Annotation کلاس درست میکنیم چون باید در قالب یک Annotation استفاده کنیم.
 
 با Qualifier میایم میگیم که هرجا که string یی خواستیم که nickname مد نظرمون بود همون nickname رو به ما بده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image064.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image063.jpg)
 
 همچین کلاسی ساخته میشه که داخلش با Qualifier میایم و به hilt میشناسونیمش.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image065.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image064.png)
 
 بعد میایم و نحوه ی اجرا شدن Qualifier رو هم میگیم که زمانی که میخواد کامپایل بشه چطور این اتفاق بیفته که از @Retention ها استفاده میکنیم.
 
 که میتونیم نحوه کامپایل شدنش رو مشخص کنیم که به چه صورتی باشه :
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image066.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image065.png)
 
 BINARY که بصورت حالت باینری اجرا میکنه و تبدیلش میکنه به باینری.
 
 RUNTIME که به حالت ران تایم اجراش میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image067.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image066.png)
 
 میایم و بصورت باینری رو انتخاب میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image068.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image067.png)
 
-میایم داخل فایل ماژولمون و اون کلاس Annotation (@nickname) که ساخته بودیم رو به متد موردنظرمون اضافه میکنیم که دیگه علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image069.png) از بین میره و خودش تشخیص میده.
+میایم داخل فایل ماژولمون و اون کلاس Annotation (@nickname) که ساخته بودیم رو به متد موردنظرمون اضافه میکنیم که دیگه علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image068.png) از بین میره و خودش تشخیص میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image070.png) 
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image069.png) 
 
 که بعد میایم و از Annotation مون توی کلاس activity مون هم استفاده میکنیم و به اون متغییری که inject کردیم میدیم.
 
@@ -452,23 +451,23 @@ RUNTIME که به حالت ران تایم اجراش میکنه.
 
 قسمت 35
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image071.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image070.png)
 
 Named : بجای Qualifiers میتونیم از Named استفاده کنیم که خیلی راحت هست و از نوع inject هست.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image072.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image071.png)
 
 و فقط داخلش میایم و کلید مورد نظرو قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image073.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image072.png)
 
 چون کلید های Named بصورت ثابت هستن، بهتر ، استاندارتر، اصولی تر و حرفه ایی تر اینه که بیایم و بصورت ثابت داخل constants تعریفش کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image074.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image073.png)
 
 به این صورت و در ثابت ها میایم برای هرکدوم یه اسم انتخاب میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image075.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image074.jpg)
 
 موقع استفاده در اکتیویتی هم میایم و به این صورت استفاده میکنیم و با named مشخص میکنیم.
 
@@ -476,25 +475,25 @@ Named : بجای Qualifiers میتونیم از Named استفاده کنیم ک
 
 درحالت عادی میومدیم و تو constructor ش context رو میدادیم و بعد هرجا که میخواستیم از اون کلاس استفاده کنیم توی constructor پاس میدادیم و استفاده میکردیم، ولی اینجا اگه از این روش استفاده کنیم وابستگی بوجود میاره و کلاس ما به context وابستگی پیدا میکنه و بعد باید این وابستگی هارو توی activity مون تامین کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image076.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image075.png)
 
 برای اینکه بتونیم text رو از پوشه res-> string بتونیم بخونیم و استفاده کنیم نیاز به get string هست، ولی نمیشناسه چون برای اینکه بتونیم از get string استفاده کنیم نیاز به context داریم.
 
 وقتی از get string داخل اکتیویتی استفاده میکنیم میشناسه چون خود اکتیویتی بصورت پیشفرض context رو داره.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image077.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image076.png)
 
 اگه بیایم و مستقیم داخل ورودی context بدیم یعنی داریم دوباره وابستگی ایجاد میکنیم و درست نیست.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image078.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image077.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image079.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image078.png)
 
 میایم و context رو بهش میدیم ولی نه اینکه خودمون بیایم و تامینش کنیم بلکه با      @Application Context میگیم خودت برو تامینش کن، که میره و context مربوطه رو میاره و برامون تامینش میکنه و بعد ما میتونیم با context به get string دسترسی داشته باشیم.
 
 درست که ما context رو در ورودی دادیم ولی خودش میره context رو تامین میکنه و بعد در اختیار ما قرار میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image080.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image079.png)
 
 به همین سادگی میتونیم ازش استفاده کنیم، بدون اینکه نیاز باشه جایی بیایم و ماژولمون رو تعریف کنیم.
 
@@ -506,23 +505,23 @@ Named : بجای Qualifiers میتونیم از Named استفاده کنیم ک
 
 یه پوشه ی db برای دیتابیس روم ایجاد میکنیم و داخلش کلاس های entity, dao, database رو درست میکنیم، که همشون براساس کدهایی تکراری هست که قبلاً زدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image081.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image080.jpg)
 
 Entity رو از نوع data class تعریف میکنی و داخلش 2 تا متغییر داریم یه id و یه title .
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image082.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image081.jpg)
 
 داخل dao 2تا عملیات بیشتر نداریم یکی save هست که insert میکنیم و یکی دیگه هم یه custom query هست که  get All که بصورت mutable list هست و  میاد اطلاعات ذخیره شده رو نشون میده.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image083.jpg)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image082.jpg)
 
 اگه از export Schema توی کلاس database استفاده نکنیم موقع خروجی گرفتن warning میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image084.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image083.png)
 
 توی database مون entity و dao رو مینویسیم، که موقع استفاده از دیتابیس ما 2 تا فیلد داریم که یکی id که auto generate هست و یه فیلد دیگه title که توسط کاربر پر میشه و بعد لیست رو نشون میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image085.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image084.png)
 
 میایم از کلاس adapter بصورت خام و بدون hilt استفاده میکنیم.
 
@@ -538,23 +537,23 @@ Entity رو از نوع data class تعریف میکنی و داخلش 2 تا م
 
 که میومدیم و توی تموم کلاس هایی که نیاز بود دیتابیس رو تعریف میکردیم :
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image086.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image085.png)
 
 2-  dao: که ما توسط dao که داخل کلاس دیتابیس تعریف کرده بودیم: 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image087.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image086.png)
 
 میتونستیم به interface dao دسترسی داشتیم : 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image088.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image087.png)
 
 که بتونیم عملیات هامون رو مثل delete, update, save و ... بتونیم انجام بدیم.
 
 3- entity : وقتی میخوای اطلاعات رو save, update, delete و ... کنیم، نیاز داریم که اول اطلاعاتی مثلاً مثل id, tiltle و ... رو در entity بریزیم و بعد از entity بریزیم توی dao:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image089.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image088.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image090.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image089.jpg)
 
 ما به این 3 تا(database, dao, entity) نیاز داریم و هرجا که بخوایم با database کار کنیم این 3 تا وابستگی های ما هستن.
 
@@ -562,15 +561,15 @@ Entity رو از نوع data class تعریف میکنی و داخلش 2 تا م
 
 میریم توی پوشه ی di و وابستگی های database مون رو با ماژول provide یا مهیا میکنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image091.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image090.jpg)
 
 اسمش رو میزاریم db module مخفف ماژول دیتابیس، چون تو پروژه ها، ما ماژول های مختلفی داریم مثلاً ماژول برای دیتابیس، ماژول برای ارتباط با اینترنت، ماژول برای صفحه ی اصلی، ماژول فرگمنت ها و ... و هرچندتا که بخوایم و نیاز باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image092.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image091.jpg)
 
 میایم محدوده ی ماژول رو singleton میکنیم که به ازای هر اکتیویتی یا فرگمنت ساخته نشه، چون دیتابیس یک عملیات سنگین و نباید توی هر صفحه یکبار ساخته بشه، و دیتابیس ما همه جای یکی هست و عوض نمیشه، فقط اطلاعاتش تغییر میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image093.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image092.png)
 
 دقیقاً منظور همین دستورات هست که در آموزش دیتابیس و امدیم در صفحات مختلف و چندین بار تعریفش کردیم که این کار فشار اپلیکیشن به سخت افزار و زیاد میکنه و ما منابع محدودی داریم و نباید همه چی الکی از اول ساخته بشه، بخاطر همین singleton میکنیم، که تو کل زمانی که اپلیکیشن ما داره ساخته میشه، یکبار اونو درست میکنه و هرکجا که نیاز بود، میره از همون یکباری که داخل بلوک رم ذخیره شده بود استفاده میکنه و اگه از singleton استفاده نکنیم مدام داره تعریف میکنه که از بدترین نوع ممکن هست.
 
@@ -578,45 +577,45 @@ Entity رو از نوع data class تعریف میکنی و داخلش 2 تا م
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image094.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image093.png)
 
 دیتابیس رو singleton تعریف میکنیم چون سنگین هست و میخوایم فقط یکبار تعریف بشه و همه اش تعریف نشه، و دیتابیس نیاز به context داره و نیاز به room . database builder که از ما 3 تا ورودی میخواد.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image095.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image094.png)
 
 ورودی اول context ، ورودی دوم خود کلاس دیتابیس، ورودی سوم هم اسم دیتابیسمون هست که بصورت ثابت تعریف کرده بودیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image096.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image095.png)
 
 بعد میایم و روی ترد main هم با allow main اوکی میکنیم و با migration برای نسخه های مختلف که به conflict نخوره و بعد build میکنیم.
 
 نیاز به dao داریم برای انجام عملیات دیتابیس.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image097.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image096.jpg)
 
 چون عملیات dao ثابت هست اونو هم بصورت singleton تعریف میکنیم، و dao برای انجام عملیات مثلاً ذخیره، آپدیت، دیلیت و ... ، نیاز به دیتابیس داره که ما نیاز داریم به دیتابسمون که provide ش کردیم.
 
 هرچیزی که داریم provide (مثلاً database)میکنیم و میخوایم از اون توی چیز دیگه ایی (مثلاً dao) که وابسته اس به اون استفاده کنیم، باید از constructor ش استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image098.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image097.png)
 
 و ما میخوایم از dao استفاده کنیم که وابسته هستیم به database ، پس میایم و database مون(Note database) رو توی ورودی dao و بهش میدیم، که با db به متد note dao که داخل کلاس دیتابیس نوشته بودیم دسترسی داریم.
 
 بعد نیاز به entity داریم برای ذخیره اطلاعات.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image099.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image098.png)
 
 چون entity سنگین نیست ما میتونیم واسش از singleton استفاده نکنیم.
 
 ولی note model از ما مقدار پیشفرض میخواد error میده، چون میخواد تعریف بشه و نیاز به مقدار پیشفرض داره، ولی ما که نمیدونیم id, title ما با چه مقداری میخوان ذخیره بشن.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image100.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image099.png)
 
 بخاطر همین توی مدلمون یه مقدار پیشفرض براشون set میکنیم که فعلاً error رو برای ما نشون نده.
 
 وقتی که ما default value ست میکنیم میره برای ساختنشون از default value استفاده میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image101.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image100.png)
 
 ما اومدیم و وابستگی های کلاس دیتابیسمون رو درست کردیم.
 
@@ -628,13 +627,13 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 برای اینکه کدهامون شلوغ نشه یه package دیگه به اسم repository درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image102.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image101.png)
 
 میایم و کلاس db repository درست میکنیم.
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image103.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image102.png)
 
 این repository برای اینکه اطلاعات رو تامین کنه و در اختیار ما قرار بده نیاز به dao (note dao) داره، چون اطلاعات ما توسط note dao کنترل میشن مثلاً ذخیره، آپدیت، گرفتن، دیلیت و ... که داخل dao قرار داره و repository برای تامین این اطلاعات نیاز داره به dao دسترسی داشته باشه که اونو توی ورودی constructor repository قرار میدیم و میتونیم ازش استفاده کنیم.
 
@@ -642,11 +641,11 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 جاهایی که میخوایم ورودی و constructor داشته باشیم و اونو قبلاً تامین کردیم یا میخوایم تامین کنیم، نباید بیام مستقیماً داخل constructor و بعد براش ورودی set کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image104.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image103.jpg)
 
 برای تزریق وابستگی میایم و قبل از سازنده یا constructor کلاس و از @inject استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image105.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image104.jpg)
 
 با اینکار اون متد dao که داخل ماژولمون تعریف کرده بودیم رو تزریق کردیم، که داخل     constructor repository نیاز به note dao داشتیم که note dao رو تو ماژول provide کرده بودیم و خود note dao نیاز به note database داره که اونو هم همونجا provide کرده بودیم و بهش دادیم و همینطور سلسله وار میره جلو.
 
@@ -654,7 +653,7 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 که 2تا query save, get all داشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image106.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image105.png)
 
 برای ورودی constructor باید از نوع val در نظر بگیریم و گرنه داخل کلاس نمیتونیم از dao استفاده کنیم.
 
@@ -666,43 +665,43 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 میخوایم از hilt داخل adapter استفاده کنیم که نیایم و adapter رو مستقیم تعریف کنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image107.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image106.png)
 
 اینجا اومدیم و adapter رو هرچند بصورت lazy ، تعریف کردیم و بهش وابستگی داریم و داریم initialize ش میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image108.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image107.jpg)
 
 میایم و با @inject داخل constructor و تزریق میکنیم وابستگیمون رو.
 
 زمانی که میخوایم برای یک کلاس وابستگی رو تزریق کنیم، چه constructor داشته باشه و چه نداشته باشه، ما باید بهش constructor رو اضافه کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image109.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image108.png)
 
 اگه constructor نزاریم inject رو قبول نمیکنه و error میده.
 
 برای اینکه مستقیماً note adapter رو تعریف نکنیم میایم و بهش constructor میدیم هرچند بصورت خالی باشه و هیچ مشکلی نداره و روش استفاده اش همینه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image110.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image109.png)
 
 ما میتونیم حتی کلاس ها و مواردی که داخل ماژول نیستن رو هم singleton یا activity scope ،       fragment scope یا view model scope بزنیم و استفاده کنیم و نیاز نیست حتماً داخل ماژول باشه تا بتونه singleton یا بقیه موارد باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image111.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image110.png)
 
 Component رو نمیتونیم خارج از ماژول بزنیم، چون مخصوص @install in هست و محدوده ی خود ماژول رو مشخص میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image112.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image111.png)
 
 میتونیم adapter مون رو singleton کنیم که در طول اجرای اکتیوتی یه بار ساخته بشه و همونو نشون بده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image113.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image112.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image114.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image113.png)
 
 یا حتی میتونیم از activity scope یا fragment scope هم استفاده کنیم.
 
 ما حتی میتونیم adapter رو داخل ماژول تعریف کنیم ولی چون ماژولمون db بود و مربوط به دیتابیس بود بخاطر همین adapter رو داخل ماژول قرار ندادیم، و همین که ممکن ما یه کلاسی(adapter) داشته باشیم که وابستگی داره به یه سری چیزهای دیگه، که اومدیم وابستگی خود کلاس (adapter) رو هم تامین کردیم، بخاطر همین توی ماژول ننوشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image115.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image114.png)
 
 و حتی میتونیم repository رو هم بصورت singleton تعریف کنیم.
 
@@ -716,37 +715,37 @@ Component رو نمیتونیم خارج از ماژول بزنیم، چون م�
 
 1- adapter 2- repository : چون ریپازیتوری میاد و عملیات های ما مثل ذخیره کردن، آپدیت، دیلیت کردن و گرفتن اطلاعات رو برای ما تامین میکنه.3- نیاز به مدل (note model) داریم تا بتونیم اطلاعات رو ذخیره کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image116.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image115.png)
 
 میایم هر 3 مورد رو inject میکنیم و حتماً حتماً باید @Andoid Entry Point رو هم بهش بدیم وگرنه هیچکدوم از inject ها و وابستگی هارو نمیشناسه و کرش میکنه.
 
-روی هرکدوم از علامت ها ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image117.png) میزنیم دقیقاً وارد کلاسش میشه و constructor اون کلاس هارو نشون میده، هرچند مثلconstructor adapter  خالی باشه، بخاطر همین به constructor ها نیاز داریم.
+روی هرکدوم از علامت ها ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image116.png) میزنیم دقیقاً وارد کلاسش میشه و constructor اون کلاس هارو نشون میده، هرچند مثلconstructor adapter  خالی باشه، بخاطر همین به constructor ها نیاز داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image118.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image117.png)
 
 چون entity رو inject کردیم و initialize شده دیگه نیازی نیست مجدداً  اینطوری بنویسیم و دوباره initialize کنیم بعد بیایم و به note model مقدار بدیم، البته میتونیم با همین روش هم بریم، یا میتونیم مستقیم ازش استفاده کنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image119.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image118.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image120.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image119.png)
 
 میتونیم مقداری که میخوایم رو مستقیماً، توی خودش ذخیره کنیم ولی باید بیایم و note model مون مواردش رو به var تغییر بدیم وگرنه error میده، چون میخوایم دوباره مقدار دهی کنیم و نباید val باشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image121.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image120.png)
 
 میایم و id رو 0 میزاریم چون auto generate هست خودش بهش اضافه میشه و title رو هم از edit text مون میگیریم بعد اینکه entity رو پر کردیم میریم و از طریق repository ذخیره میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image122.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image121.png)
 
 بعد اینکه کاربر روی save زد میایم و edit text رو خالی میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image123.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image122.png)
 
 اومدیم با استفاده از adapter و با repository اطلاعات رو گرفتیم و بعد recycler view رو هم set میکنیم.
 
 وقتی برنامه اجرا میشه و چیزی مینویسیم و دکمه save رو میزنیم برنامه ذخیره میکنه و چیزی نشون نمیده که باید دوباره اجرا کنیم تا نشون بده:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image124.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image123.png)
 
 برای حل این مشکل و اینکه همون لحظه به لیست اضافه کنه میایم و adapter رو همونجایی که روی دکمه save کلیک شد قرار میدیم تا در لحظه نشون بده.
 
@@ -766,13 +765,13 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 1- متغییری که توسط این متغییر میتونیم اطلاعاتی که میخوایم رو بگیریم و در نهایت اونرو در قالب interface بفرستیم و از lambda expression ها استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image125.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image124.png)
 
 یه متغییر به اسم on item click listener مینویسیم، چون میخوایم اطلاعات هر آیتم هم فرستاده بشه میایم و model مون رو هم میفرستیم که بصورت unit مینویسیم که یعنی، مقدار بازگشتی نداره و معادل void جاوا هست و براش امکان null بودن رو هم درنظر میگیریم.
 
 2- نیاز به یه function داریم تا بتونیم از متغییرمون استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image126.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image125.png)
 
 که براش یه اسم(set on item click listener) در نظر میگیریم که از ما یه listener میخواد، بعد از ما lambda expression یی که بالا نوشته بودیم رو میخواد و میایم بهش همون مدلمون (note model)
 
@@ -782,29 +781,29 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 الان براحتی ما روی هر آیتم که کلیک کنیم و توی activity از متد set on item click listener استفاده کنیم، بواسطه متغییر on item click listener هر آیتمی که انتخاب بشه چون مقدار note model رو داریم برامون برمیگردونه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image127.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image126.png)
 
 میریم داخل inner class و داخل متد set data و کلیک رو مینویسیم و با استفاده از متغییر on item click listener میگیم اگه null نبود که از let استفاده میکنیم که همون note model رو برای ما برمیگردونه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image128.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image127.jpg)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image129.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image128.jpg)
 
 که با it که همون note model ماست میایم براش note یا یه دونه آیتم از لیستمون رو میفرستیم.
 
 خلاصه توضیحات برای interface مون که برای کلیک نوشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image130.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image129.png)
 
 اومدیم یه متغییر on item click listener درست کردیم که تقریباً کار listener مارو انجام میده و داخلش کلاس note model مون رو میخوایم انتقال بدیم، که میگیم بصورت unit باشه و مقدار برگشتی نداره، بعد میایم یه متد set on item click listener مینویسیم که بتونیم جای دیگه مثلاً توی فرگمنت یا اکتیویتی دیگه بتونیم ازش استفاده کنیم و بعد اومدیم داخل متدمون و اون متغییر item click رو مقدار دهی کردیم، بعد میگیم زمانی که روی آیتم recycler view کلیک شد و میخوایم اطلاعات رو بفرستیم میایم و متغییر on item click رو با استفاده از مدلمون هر item یی که کلیک شد رو پر میکنیم و مقدارشو میگیریم، و هرجا از متد set on item استفاده کنیم، چون listener مون رو با on item click مقدار دهی کردیم، خیلی راحت میتونیم ازش استفاده کنیم.
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image131.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image130.png)
 
 حالا داخل activity مون و با استفاده از adapter به متد set on item دسترسی داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image132.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image131.png)
 
 بعد میایم و داخلش هرکاری که نیاز هست رو انجام میدیم، مثلاً یه toast مینویسیم.
 
@@ -812,7 +811,7 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 این یکی از بهترین روش ها برای هندل کردن عملیات کلیک هست که با hilt هم سازگاری داره.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image133.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image132.png)
 
 
 
@@ -820,7 +819,7 @@ Interface مثل یه شیلنگ آب میمونه، هر وقت وصلش کنی
 
 Hilt و Retrofit :
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image134.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image133.jpg)
 
 کتابخونه log interceptor به ما کمک میکنه بتونیم جزئیات بیشتری از api که داریم call میکنیم رو ببینیم.
 
@@ -828,23 +827,23 @@ Hilt و Retrofit :
 
 درکل ما با این کتابخونه میتونیم از api که داریم call میکنیم چه اوکی باشه چه با error روبرو بشه میتونیم log بگیریم و با جزئیات کامل همه چیزرو به ما نشون میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image135.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image134.png)
 
 میایم 3 تا پوشه api, model, module رو به پروژه مون اضافه میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image136.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image135.png)
 
 توی api services میایم و endpoint مون رو قرار میدیم.
 
 توی model هم همون مدلی که قبلاً توی retrofit کار کرده بودیم رو قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image137.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image136.png)
 
 بعد میایم و ماژول api مون رو هم مینویسیم و singleton میزاریم چون یک تنظیمات بیشتر برای ارتباط با سرور نداریم مثلاً بیایم توی هر صفحه ی یه base url داشته باشیم و بیایم توی اکتویتی a دیجی کالا رو داشته باشیم و توی activity b به دیوار api بزنیم و مثلاً توی activity c به اسنپ api بزنیم، چون اپمون یه دونه اس و تنظیماتمون هم یه دونه اس بخاطر همین میایم و از singleton استفاده میکنیم ولی تو مواقع خیلی خاص که چندین api داریم و نیاز داریم که اطلاعات مختلف از جاهای مختلف بیاد و نشون بدیم میایم بجای singleton از حالت های دیگه ایی استفاده میکنیم و برای هرکدوم از api ها یه تنظیمات خاص میزنیم که در 99% موارد ما فقط یه api داریم و اطلاعات از یکجا میاد.
 
 وابستگی هایی که توی retrofit و داخل api client نیاز داریم کدهایی که قبلاً زده بودیم رو بررسی میکنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image138.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image137.png)
 
 client به time وابستگی داره، چون تایم داره از جای دیگه ایی میاد، خود retrofit هم به 2 تا چیز دیگه وابستگی داره، 1- base url و 2- client .
 
@@ -852,21 +851,21 @@ client به time وابستگی داره، چون تایم داره از جای 
 
 به این حالت میشه نحوه ی وابستگی هارو تشخیص داد و یکی از بهترین راهای تشخیص وابستگی، trace کردن کدهاست، یعنی همین کاری که ما با retrofit انجام دادیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image139.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image138.png)
 
 ما میتونیم constants یا ثابت هارو هم بصورت فایل و هم بصورت object درست کنیم و هردو حالت درسته.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image140.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image139.jpg)
 
 Base url و time رو به constants مون اضافه میکنیم.
 
 Time برای مشخص کردن زمان time out شدن سرور نیاز داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image141.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image140.jpg)
 
 چون base url ما ثابت هست و عوض نمیشه singleton قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image142.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image141.jpg)
 
 Connection timeout رو هم singleton قرار میدیم.
 
@@ -876,7 +875,7 @@ Connection timeout رو هم singleton قرار میدیم.
 
 در اینجور مواقع میایم و یک بخشی رو به gson اضافه میکنیم، که بتونیم اون تنظیمات و option های خاص رو هم بتونیم ساپورت کنیم که بهش میگن lenient .
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image143.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image142.jpg)
 
 متدمون رو از نوع gson میزاریم و برای اینکه بتونیم از set lenient استفاده کنیم باید از حالت gson builder برای اضافه کردن تنظیمات خاص استفاده کنیم، که gson رو با حالت lenient درست میکنیم.
 
@@ -886,29 +885,29 @@ Connection timeout رو هم singleton قرار میدیم.
 
 برای log interceptor اکثراً در 80 تا 90 درصد مواقع از body استفاده میکنیم که میاد و بدنه اون response رو به ما میده، ولی اینجا ما هم از body و هم header استفاده میکنیم و جفتشون هم از یه جنس هستن و برای هرکدوم از named استفاده میکنیم که موقع استفاده مشخص باشن.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image144.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image143.png)
 
 متدمون رو از نوع Log interceptor http قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image145.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image144.jpg)
 
 یه بخش داره به اسم level ، که ما توی level سطح اون log یی که میخوایم رو میگیریم، مثلاً میگیم body رو به ما بده یا header رو به ما بده یا هرچیزی که نیاز داریم رو به ما بده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image146.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image145.png)
 
 که ما level رو از نوع headers انتخاب میکنیم.
 
 میایم و یه مدل دیگه هم از این log ولی برای body درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image147.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image146.png)
 
 الان ما هم header و هم body رو داریم که جفتشون از نوع okhhtp 3 و http logging interceptor هستن و چون یه نوع هست برای اینکه بتونیم ازشون استفاده کنیم باید از Named استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image148.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image147.png)
 
 میایم و براشون 2 تا اسم توی const تعریف میکنیم و به هرکدوم از متدها میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image149.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image148.png)
 
 
 
@@ -920,41 +919,41 @@ Connection timeout رو هم singleton قرار میدیم.
 
 client نیاز به یکسری موارد و وابستگی داره مثل time و ما برای اینکه بتونیم این وابستگی رو تامین کنیم باید اونرو توی constructor قرار بدیم، ما علاوه بر time به log header و log body interceptor نیاز داریم چون میان وضعیت api مارو با log نشون میدن که اوکی هست یا نه که میایم و اونهارو هم داخل constructor قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image150.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image149.png)
 
 Client رو singleton در نظر میگیریم، چون فقط میخوایم یکبار اجرا بشه.
 
 اولین موردی که در constructor قرار میدیم time هست که از نوع long هست، وقتی مینویسیم میره از بین متدهایی که برای تزریق وابستگی نوشته بودیم میبینه کدوم long هست و خودش میاد تشخیص میده:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image151.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image150.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image152.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image151.png)
 
 بعد میایم و header, body رو قرار میدیم که از نوع http log interceptor در نظر میگیریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image153.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image152.png)
 
 چون هردوتا از یک نوع بودن با استفاده از named میایم هرکدوم رو مشخص میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image154.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image153.png)
 
 بعد میایم و متدمون رو از نوع ok http client در نظر میگیریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image155.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image154.png)
 
 بعد میایم و interceptor هارو با add interceptor اضافه میکنیم و header, body رو بهش میدیم.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image156.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image155.png)
 
 بعد میایم و timeout هامون که شامل connection و read و write بود رو میدیم که از time که داخل constructor قرار دادیم استفاده میکنیم و مدت زمان و time unit رو بر حسب ثانیه در نظر میگیریم.
 
 ما میتونیم بعد همه ی این کدها از build استفاده کنیم و کارو تموم کنیم، ولی ok http به ما یه config و تنظیمات خوب میده، که میگه زمانی که با failed روبرو شد و به هر دلیلی سرور response رو به ما نداد، یکبار دیگه هم تلاش کن، و اگه بعد اون یکباری که خودت هم چک کردی و اگه اوکی نشد بیا و یه error یی رو به کاربر نشون بده.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image157.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image156.png)
 
 با retry on connection failure اگه مقدارشو true قرار بدیم زمانی که یکبار failed بشه میاد و یکبار دیگه خودش چک میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image158.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image157.jpg)
 
 و بعد میایم و build میکنیم.
 
@@ -966,35 +965,35 @@ Log body هم هرچیزی که کامل در قالب header هم میفرست�
 
 Retrofit نیاز داره به base url ، client ، و اگه تنظیمات خاصی برای gson در نظر گرفته باشیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image159.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image158.jpg)
 
 ` `میتونیم تو create بهش بدیم، که ما با set lenient براش تنظیمات خاص در نظر گرفتیم.
 
 وداخل ورودی constructor میایم و base url, client, gson ره بهش میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image160.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image159.jpg)
 
 چون retrofit هم یه کتابخونه ی سنگین هست اونو هم singleton مینویسیم تا فقط یکبار call بشه برای ما و ما وابستگی هارو به retrofit تزریق کردیم.
 
 زمانی که قبلاً داشتیم از api services توی retrofit استفاده میکردیم اونو تعریف کرده بودیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image161.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image160.jpg)
 
 و گفته بودیم برای اینکه بتونیم از تنظیمات api client مون استفاده کنیم اونو در قالب api services تعریف میکنیم، که وقتی اینطوری ازش استفاده کردیم یعنی یه وابستگی، و ما بجای اینکار میایم و همرو داخل ماژول و داخل خود retrofit تعریف میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image162.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image161.png)
 
 بخاطر همین میایم و نوع بازگشتی متد retrofit مون رو از نوع api services درنظر میگیریم، چون ما بواسطه ی این api services هست که میتونیم توی فرگمنت یا اکیتویتی call بزنیم، enqueue بزنیم و اطلاعات رو بگیریم و نشون بدیم.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image163.png)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image162.png)
 
 میایم و با استفاده از retrofit . builder و base url, client رو بهش میدیم و بعد میایم و بهش convertor رو بهش میدیم و اگه تنظیمات خاصی داشته باشیم میتونیم داخل create ش قرار بدیم که ما میایم و داخل create و gson رو بعنوان تنظیمات خاص بهش پاس میدیم و بعد build میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image164.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image163.jpg)
 
 ولی ما گفتیم که api services رو برای ما برگشت بده و دقیقاً همونطوری که قبلاً توی activity و retrofit رو تعریف میکردیم، تعریف میکنیم و داخل create کلاس api services رو بهش میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image165.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image164.png)
 
 تنظیمات کلی api ماژول مربوط به retrofit .
 
@@ -1002,25 +1001,25 @@ Retrofit نیاز داره به base url ، client ، و اگه تنظیمات �
 
 یه پوشه ی repository و یه کلاس api repository درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image166.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image165.png)
 
 داخل constructor api repository برای اینکه به endpoint مون دسترسی داشته باشیم باید اونو تعریف کنیم.
 
 private ش میکنیم چون فقط میخوایم اینجا تعریفش کنیم و val درنظر میگیریم که بهش دسترسی داشته باشیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image167.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image166.png)
 
 براش یه متد با نام دلخواه در نظر میگیریم و با استفاده از api به متد movies list مون که مربوط به اون endpoint مون میشه دسترسی پیدا میکنیم و قرار میدیم.
 
 الان ما از حالت عادی و بدون hilt استفاده کرده بودیم که با inject میایم و از hilt استفاده میکنیم و وابستگی رو تزریق میکنیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image168.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image167.jpg)
 
 برای scope خود repository هم activity قرار بدیم بهتر، چون api های مختلف تو صفحات مختلف هستن و ازشون استفاده میکنیم، و مثلاً get all movies رو قرار در صفحه ی اول نشون بدیم که لیست همه ی فیلم هارو نشون بده، و یه api دیگه داریم که وقتی وارد جزئیات شدیم، میخوایم جزئیات اون فیلم رو نشون بدیم، و اگه این scope ش از نوع activity scope باشه خیلی بهتر، چون قرار یکسری از این api ها فقط توی یکسری از صفحات کار کنن، و اگه ننویسیم هم error یی نمیده.
 
 خلاصه توضیحات api repository, api module :
 
-اگه الان داخل کلاس api repository روی علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image169.jpg) بزنیم مارو میبره به api module و به متد retrofit چون داخل رتروفیت از api services استفاده کردیم و داخل ریپازیتوری مون به api services برای تامین اطلاعات نیاز داریم و به این شکل برای ما تامین کردن اطلاعات رو.
+اگه الان داخل کلاس api repository روی علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image168.jpg) بزنیم مارو میبره به api module و به متد retrofit چون داخل رتروفیت از api services استفاده کردیم و داخل ریپازیتوری مون به api services برای تامین اطلاعات نیاز داریم و به این شکل برای ما تامین کردن اطلاعات رو.
 
 ` `و api service اومد داخل متد رترفیت و کل رتروفیت رو تعریف کرده که رتروفیت برای تعریف نیاز به base url, gson, client داره.
 
@@ -1030,7 +1029,7 @@ private ش میکنیم چون فقط میخوایم اینجا تعریفش ک�
 
 بعد همه ی مواردی که نیاز بود رو برای ما تامین میکنه و بعد با api services داخل ریپازیتوری در اختیار ما قرار میده و ما در نهایت میتونیم ازش داخل کلاس activity مون استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image170.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image169.jpg)
 
 برای استفاده از اینترنت هم بهش دسترسی میدیم.
 
@@ -1040,63 +1039,63 @@ private ش میکنیم چون فقط میخوایم اینجا تعریفش ک�
 
 برای لیست فیلم هامون یه adapter نوشتیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image171.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image170.jpg)
 
 متد get item view type برای اینه که آیتم هامون duplicate نشه.(تکراری اول قسمت 14 بخش رتروفیت گفته شده)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image172.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image171.png)
 
 برای تامین وابستگی میایم و به adapter مون یه constructor میدیم و قبلش یه inject میزاریم.
 
 یه زمانی نیاز داریم که توی کلاس adapter از context استفاده کنیم، مثلاً زمانی که از glide برای بارگذاری تصاویر استفاده میکنیم نیاز به context داریم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image173.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image172.png)
 
 در حالت عادی و بدون استفاده از hilt به این صورت میومدیم و context رو تعریف میکردیم و بعد از parent میگرفتیم یا:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image174.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image173.png)
 
 یا میتونستیم توی constructor تعریفش کنیم و بعد هرجا که میخواستیم ازش استفاده کنیم تو constructor میومدیم و context رو بهش میدادیم.
 
 ولی این روش ها مناسب نیستن و وابستگی داره و ما از هیلت استفاده میکنیم که وابستگی هارو برامون تامین کنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image175.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image174.jpg)
 
 اگه نیاز به context داشته باشیم به اینصورت میایم و با application context وابستگیمون رو تامین میکنیم.
 
 الان ما برای استفاده از retrofit و نمایش اطلاعاتمون توی activity به 2تا وابستگی نیاز داریم که اولی adapter هست و دومی repository که عملیات مارو برای api انجام داده که ما بتونیم دسترسی داشته باشیم و کارهای api رو انجام بدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image176.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image175.jpg)
 
 قبلاً برای دسترسی به api میومدیم و با lazy اونو تعریف میکردیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image177.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image176.jpg)
 
 و بعد به این صورت ازش استفاده میکردیم:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image178.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image177.png)
 
 ولی الان و با استفاده از hilt دیگه نیازی نیست که به این صورت تعریف بشه و بعد داخل متغییر call movies api قرار بدیم، بلکه با استفاده از repository و بصورت مستقیم ازش استفاده میکنیم:
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image179.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image178.jpg)
 
 با استفاده از repository میایم و متد get all movies رو میزنیم و داخل enqueue نیاز به object داریم که ازنوع callback هست و Callback یی که انتخاب میکنیم حتماً باید از نوع retrofit 2 باشه.
 
 همه ی کدها تکراری هست و درقسمت رتروفیت زده شده و توضیحات کامل داده شده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image180.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image179.png)
 
 فقط در قسمت on failure میایم و از loge استفاده میکنیم و یه tag درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image181.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image180.png)
 
 کل کدهایی که در activity زدیم.
 
 برای اینکه بتونیم موقع load شدن تصاویر یه حالت افکت بهش بدیم که جزء lambda expression ها هست و از cross fade که یه حالت محو شدن داره برای بارگذاری تصاویر استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image182.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image181.png)
 
 Cross fade 2 تا آیتم داره که باید اولی رو true کنیم تا نشون بده و دومی زمان هست برحسب میلی ثانیه که اگه ندیم خودش بصورت پیشفرض که 500 میلی ثانیه هست استفاده میکنه.
 
@@ -1110,49 +1109,49 @@ Cross fade 2 تا آیتم داره که باید اولی رو true کنیم ت
 
 ما 2تا activity داریم که با زدن یک دکمه از activity home میریم به profile و با log مشخص کنیم که برای scope بصورت singleton یا activity چه اتفاقی میفته.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image183.jpg)  
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image182.jpg)  
 
 میایم برای api service که قبلاً داشتیم و بصورت activity scoped بود استفاده میکنیم و هیچ فرقی نداره میتونیم از متدهای داخل module استفاده کنیم یا از adapter و هیچ فرقی نداره.
 
 میایم و api repository رو 2بار در activity home و 2بار هم در activity profile تعریف میکنیم و اگه یکبار تعریف کنیم یه بلوک در رم براش ذخیره میشه که مشخص نمیشه که به ازای هر تعریف در رم یکسان ذخیره میشه یا نه بخاطر همین با 2 تا اسم مختلف ذخیره میکنیم تا نتیجه مشخص بشه، که یکسان هستن یا نه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image184.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image183.jpg)
 
 بعد همین 2تا inject رو در activity profile هم قرار میدیم.
 
 برای اینکه بفهمیم چیزهایی که توی رم ذخیره شده همون location هستن، کاتلین یک کدی به ما میده به اسم hash code که ما توسط hash code میتونیم بفهمیم location مون توی رم یکی هست یا نه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image185.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image184.jpg)
 
 میایم و توی constants یه tag درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image186.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image185.jpg)
 
 میایم و با استفاده از loge و hash code های repository 1,2 رو میگیریم و به string تبدیل میکنه تا نشون بده در logcat .
 
 میخوایم ببینیم که به ازای هرکدوم از متغییرهایی که تعریف کردیم یه بلوک در رم رو به خودش اختصاص میده یا برای هردوتا یکی هست.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image186.jpg)
 
 بعد براش یه intent مینویسیم که بریم به activity profile .
 
-![My image]()
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
 
 وقتی اجرا میگیریم میاد و api repository 1,2 رو عین هم چاپ میکنه و hash code هاشون یکی هست و اگه 1000 تای دیگه هم داشته باشیم hash code همشون یکی هست و محل ذخیره همشون توی رم یکی هست.
 
 حالا میخوایم بواسطه زدن دکمه بریم به activity دوم و چون برای repository از activity scoped استفاده کردیم باید hash code های activity 1,2 باهم فرق داشته باشه.
 
-![My image]()
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
 
 چون یه scope یا محدوده ی اجرایی برای activity1 در نظر میگیره و وقتی از این صفحه میریم به صفحه ی بعد این activity stop میشه و چرخه ی حیاتش هم on stop میشه و چون در activity 2 یه activity دیگه میاد و create میشه، و وقتی یه اکتیویتی جدید ساخته شد، میاد و یه hash code جدید میسازه، چون scoped مون براساس activity هست.
 
 بخاطر همین hash code های home activity با profile activity باهم فرق دارن و به ازای هر activity یه دونه object از api repository برای ما ساخته میشه.
 
-![My image]()
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
 
 میایم و scope کلاس api repository رو به singleton تغییر میدیم و اجرا میگیریم.
 
-![My image]()
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image187.jpg)
 
 وقتی اجرا میگیریم در حالت singleton در هر 2تا activity hash code ها یکی هستن، یعنی در طول کل اپلیکیشن یکبار اومده و اونرو تعریف کرده، و توی هرصفحه ایی که میخوایم ازش استفاده کنیم نمیاد از اول تعریف کنه، میره به اون location یی که براش توی ram در نظر گرفته که ذخیره اش کنه، میره بهش اشاره میکنه و اونو در دسترس ما قرار میده.
 
