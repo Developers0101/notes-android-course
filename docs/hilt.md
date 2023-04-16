@@ -409,37 +409,37 @@ Qualifiers : یعنی درسته که 2 یا چندتا چیز داریم ولی
 
 چون مربوط به dependency injection میشه میایم و توی پوشه ی di و یه پوشه ی جدید به اسم Qualifiers درست میکنیم چون ممکن چندین Qualifiers داشته باشیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image062.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image061.png)
 
 بعد داخل پوشه Qualifier میایم و یک Annotation کلاس درست میکنیم چون باید در قالب یک Annotation استفاده کنیم.
 
 با Qualifier میایم میگیم که هرجا که string یی خواستیم که nickname مد نظرمون بود همون nickname رو به ما بده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image063.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image062.png)
 
 همچین کلاسی ساخته میشه که داخلش با Qualifier میایم و به hilt میشناسونیمش.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image064.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image063.png)
 
 بعد میایم و نحوه ی اجرا شدن Qualifier رو هم میگیم که زمانی که میخواد کامپایل بشه چطور این اتفاق بیفته که از @Retention ها استفاده میکنیم.
 
 که میتونیم نحوه کامپایل شدنش رو مشخص کنیم که به چه صورتی باشه :
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image065.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image064.jpg)
 
 BINARY که بصورت حالت باینری اجرا میکنه و تبدیلش میکنه به باینری.
 
 RUNTIME که به حالت ران تایم اجراش میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image066.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image065.png)
 
 میایم و بصورت باینری رو انتخاب میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image067.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image066.png)
 
-میایم داخل فایل ماژولمون و اون کلاس Annotation (@nickname) که ساخته بودیم رو به متد موردنظرمون اضافه میکنیم که دیگه علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image068.png) از بین میره و خودش تشخیص میده.
+میایم داخل فایل ماژولمون و اون کلاس Annotation (@nickname) که ساخته بودیم رو به متد موردنظرمون اضافه میکنیم که دیگه علامت ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image048.png) از بین میره و خودش تشخیص میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image069.png) 
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image067.png) 
 
 که بعد میایم و از Annotation مون توی کلاس activity مون هم استفاده میکنیم و به اون متغییری که inject کردیم میدیم.
 
@@ -451,23 +451,23 @@ RUNTIME که به حالت ران تایم اجراش میکنه.
 
 قسمت 35
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image070.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image068.png)
 
 Named : بجای Qualifiers میتونیم از Named استفاده کنیم که خیلی راحت هست و از نوع inject هست.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image071.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image069.png)
 
 و فقط داخلش میایم و کلید مورد نظرو قرار میدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image072.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image070.png)
 
 چون کلید های Named بصورت ثابت هستن، بهتر ، استاندارتر، اصولی تر و حرفه ایی تر اینه که بیایم و بصورت ثابت داخل constants تعریفش کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image073.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image071.png)
 
 به این صورت و در ثابت ها میایم برای هرکدوم یه اسم انتخاب میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image074.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image072.jpg)
 
 موقع استفاده در اکتیویتی هم میایم و به این صورت استفاده میکنیم و با named مشخص میکنیم.
 
@@ -475,25 +475,25 @@ Named : بجای Qualifiers میتونیم از Named استفاده کنیم ک
 
 درحالت عادی میومدیم و تو constructor ش context رو میدادیم و بعد هرجا که میخواستیم از اون کلاس استفاده کنیم توی constructor پاس میدادیم و استفاده میکردیم، ولی اینجا اگه از این روش استفاده کنیم وابستگی بوجود میاره و کلاس ما به context وابستگی پیدا میکنه و بعد باید این وابستگی هارو توی activity مون تامین کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image075.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image073.png)
 
 برای اینکه بتونیم text رو از پوشه res-> string بتونیم بخونیم و استفاده کنیم نیاز به get string هست، ولی نمیشناسه چون برای اینکه بتونیم از get string استفاده کنیم نیاز به context داریم.
 
 وقتی از get string داخل اکتیویتی استفاده میکنیم میشناسه چون خود اکتیویتی بصورت پیشفرض context رو داره.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image076.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image074.png)
 
 اگه بیایم و مستقیم داخل ورودی context بدیم یعنی داریم دوباره وابستگی ایجاد میکنیم و درست نیست.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image077.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image075.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image078.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image076.png)
 
 میایم و context رو بهش میدیم ولی نه اینکه خودمون بیایم و تامینش کنیم بلکه با      @Application Context میگیم خودت برو تامینش کن، که میره و context مربوطه رو میاره و برامون تامینش میکنه و بعد ما میتونیم با context به get string دسترسی داشته باشیم.
 
 درست که ما context رو در ورودی دادیم ولی خودش میره context رو تامین میکنه و بعد در اختیار ما قرار میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image079.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image077.png)
 
 به همین سادگی میتونیم ازش استفاده کنیم، بدون اینکه نیاز باشه جایی بیایم و ماژولمون رو تعریف کنیم.
 
@@ -505,23 +505,23 @@ Named : بجای Qualifiers میتونیم از Named استفاده کنیم ک
 
 یه پوشه ی db برای دیتابیس روم ایجاد میکنیم و داخلش کلاس های entity, dao, database رو درست میکنیم، که همشون براساس کدهایی تکراری هست که قبلاً زدیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image080.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image078.jpg)
 
 Entity رو از نوع data class تعریف میکنی و داخلش 2 تا متغییر داریم یه id و یه title .
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image081.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image079.jpg)
 
 داخل dao 2تا عملیات بیشتر نداریم یکی save هست که insert میکنیم و یکی دیگه هم یه custom query هست که  get All که بصورت mutable list هست و  میاد اطلاعات ذخیره شده رو نشون میده.
 
-` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image082.jpg)
+` `![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image080.jpg)
 
 اگه از export Schema توی کلاس database استفاده نکنیم موقع خروجی گرفتن warning میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image083.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image081.jpg)
 
 توی database مون entity و dao رو مینویسیم، که موقع استفاده از دیتابیس ما 2 تا فیلد داریم که یکی id که auto generate هست و یه فیلد دیگه title که توسط کاربر پر میشه و بعد لیست رو نشون میده.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image084.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image082.jpg)
 
 میایم از کلاس adapter بصورت خام و بدون hilt استفاده میکنیم.
 
@@ -537,23 +537,23 @@ Entity رو از نوع data class تعریف میکنی و داخلش 2 تا م
 
 که میومدیم و توی تموم کلاس هایی که نیاز بود دیتابیس رو تعریف میکردیم :
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image085.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image083.jpg)
 
 2-  dao: که ما توسط dao که داخل کلاس دیتابیس تعریف کرده بودیم: 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image086.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image084.png)
 
 میتونستیم به interface dao دسترسی داشتیم : 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image087.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image085.png)
 
 که بتونیم عملیات هامون رو مثل delete, update, save و ... بتونیم انجام بدیم.
 
 3- entity : وقتی میخوای اطلاعات رو save, update, delete و ... کنیم، نیاز داریم که اول اطلاعاتی مثلاً مثل id, tiltle و ... رو در entity بریزیم و بعد از entity بریزیم توی dao:
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image088.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image086.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image089.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image087.png)
 
 ما به این 3 تا(database, dao, entity) نیاز داریم و هرجا که بخوایم با database کار کنیم این 3 تا وابستگی های ما هستن.
 
