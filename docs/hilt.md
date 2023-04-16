@@ -1,10 +1,10 @@
 ---
 layout: default
-title: دگر-هیلت
+title: 7- دگر-هیلت
 nav_order: 8
 --- 
 
-# Dagger-Hilt
+#7- استفاده از Dagger-Hilt
 
 قسمت 31
 
