@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5- نویگیشن کامپونینت
-nav_order: 5
+nav_order: 6
 ---
 # 5- استفاده از navigation component
 قسمت 16:
