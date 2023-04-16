@@ -6,12 +6,12 @@
     url('https://github.com/Developers0101/notes-android-course/raw/main/font/Vazir.woff2') format('woff2');
 }
 
-body {
+html {
   font-family: 'vazir' !important;
-  background-color: #27262b;
+  background-color: #27262b !important;
 }
 p, h1{
- color: white; 
+ color: white !important; 
 }
 .main-content-wrap{
   direction: rtl;
