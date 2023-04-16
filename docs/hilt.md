@@ -165,16 +165,19 @@ Install in برای کل ماژول بود و بازه یا محدوده ی اج
 سرویس ها: وقتی یه سرویسی رو اجرا کردیم و اون service داره توی پسزمینه یه سری کارهای مربوط به خودشو انجام میده و service که destroy شد این وابستگی ها هم destroy میشه، و همینطور میشه برای activity یا view model استفاده کرد.
 
 حتی میشه وابستگی رو در قالب یک view درست کنیم و وقتی که اون view از بین رفت، وابستگی ما هم از بین بره و وقتی دوباره view ساخته شد وابستگی مارو تامین کنه.
+
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image023.jpg)
+
+
 Provides : وابستگی های مارو برامون مهیا میکنه، تامین میکنه.
 
 مثلاً توی رتروفیت که استفاده کرده بودیم اومدیم از base url ، client برای تنظیمات اختصاصی و از gson برای تبدیل کردن json استفاده کردیم که رتروفیت ما 3 تا وابستگی داشت: 1- base url 2- gson 3- client ، که ما توسط provides میتونیم این وابستگی هارو مهیا و تامین کنیم، برای چیزی که میخواد ازشون استفاده کنه.
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image024.jpg)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image025.png)
-
 Binds : بایندز هم از نظر سازوکار عین provides هست، با این تفاوت که provides مقدار میگیره ولی binds بصورت abstract هست و همون اول مقدار نمیگیره:
+
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image025.png)
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image026.png)
 
