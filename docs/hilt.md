@@ -179,21 +179,21 @@ Binds : بایندز هم از نظر سازوکار عین provides هست، ب
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image025.png)
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image026.png)
+
 
 داخل provides میتونیم از =(initialize کردن) استفاده کنیم یا حتی میتونیم از { } بسته استفاده کنیم و return کنیم، و provides برای اینجور مواقع استفاده میشه که اون چیز داره تعریف میشه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image027.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image026.png)
 
 ولی بعضی وقتها ما میخوایم از interface ها استفاده کنیم یا از abstract class ها استفاده کنیم، چون الان نمیدونم به چه صورت میخوایم استفاده کنیم، و بعد در موقعی که نیاز شد میاد و تعریف میشه.
 
 در اینجور مواقع که ما اون رو کامل تعریف نمیکنیم، و میخوایم در قالب abstract استفاده کنیم میایم و از @Binds استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image028.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image027.jpg)
 
 Qualifier و Named : مثلاً ما 2 string داریم یه جا به اسم Mohammad و جای دیگه به اسم Mp و میخوایم اینارو به کلاسمون تزریق کنیم، زمانی که میخوایم تزریق کنیم نمیدونه که کدوم string رو باید بگیره، میره در کل پروژه و میبینه کجا یه string در قالب dependency injection یا تزریق وابستگی تامین شده، مثلاً string Mohammad و بعد اونو به ما میده ولی ما string Mp رو میخواستیم که از Qualifier یا Named استفاده میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image029.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image028.jpg)
 
 یا مثلاً برای retrofit ، ممکن 2تا تنظیمات مختلف برای رتروفیت داشته باشیم، چون پیش میاد و ما از جاهای مختلف api میگیریم، نیاز داریم که چیزهای مختلفی هم برای رتروفیت داشته باشیم و 2 تا تنظیمات برای api client در رتروفیت داشته باشیم توسط Qualifier یا Named میایم و برای اون وابستگی که میخوایم تزریقش کنیم یک اسم بخصوص درنظر میگیریم و هرجا که میخوایم استفاده کنیم توسط همین اسم میاد و وابستگی رو برای ما تزریق میکنه.
 
@@ -205,10 +205,11 @@ Qualifier و Named : مثلاً ما 2 string داریم یه جا به اسم M
 
 قسمت 33
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image030.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image029.png)
 
 برای اینکه بتونیم از hilt استفاده کنیم این 2تا کتابخونه رو به قسمت dependency های gradle module اضافه میکنیم.
 
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image030.png)
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image031.jpg)
 
 چون توی dependency از kapt استفاده کردیم میایم و توی plugin هم kotlin kapt رو قرار میدیم و باید hilt رو هم به plugin اضافه کنیم.
