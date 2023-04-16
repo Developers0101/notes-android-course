@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 8- ویو مدل
-nav_order: 3
+nav_order: 9
 ---
 # 8- ویو مدل
 قسمت 43
