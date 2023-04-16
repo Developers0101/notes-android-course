@@ -569,7 +569,7 @@ Entity رو از نوع data class تعریف میکنی و داخلش 2 تا م
 
 میایم محدوده ی ماژول رو singleton میکنیم که به ازای هر اکتیویتی یا فرگمنت ساخته نشه، چون دیتابیس یک عملیات سنگین و نباید توی هر صفحه یکبار ساخته بشه، و دیتابیس ما همه جای یکی هست و عوض نمیشه، فقط اطلاعاتش تغییر میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image090.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image083.jpg)
 
 دقیقاً منظور همین دستورات هست که در آموزش دیتابیس و امدیم در صفحات مختلف و چندین بار تعریفش کردیم که این کار فشار اپلیکیشن به سخت افزار و زیاد میکنه و ما منابع محدودی داریم و نباید همه چی الکی از اول ساخته بشه، بخاطر همین singleton میکنیم، که تو کل زمانی که اپلیکیشن ما داره ساخته میشه، یکبار اونو درست میکنه و هرکجا که نیاز بود، میره از همون یکباری که داخل بلوک رم ذخیره شده بود استفاده میکنه و اگه از singleton استفاده نکنیم مدام داره تعریف میکنه که از بدترین نوع ممکن هست.
 
@@ -577,45 +577,45 @@ Entity رو از نوع data class تعریف میکنی و داخلش 2 تا م
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image091.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image090.jpg)
 
 دیتابیس رو singleton تعریف میکنیم چون سنگین هست و میخوایم فقط یکبار تعریف بشه و همه اش تعریف نشه، و دیتابیس نیاز به context داره و نیاز به room . database builder که از ما 3 تا ورودی میخواد.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image092.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image091.jpg)
 
 ورودی اول context ، ورودی دوم خود کلاس دیتابیس، ورودی سوم هم اسم دیتابیسمون هست که بصورت ثابت تعریف کرده بودیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image093.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image092.jpg)
 
 بعد میایم و روی ترد main هم با allow main اوکی میکنیم و با migration برای نسخه های مختلف که به conflict نخوره و بعد build میکنیم.
 
 نیاز به dao داریم برای انجام عملیات دیتابیس.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image094.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image093.png)
 
 چون عملیات dao ثابت هست اونو هم بصورت singleton تعریف میکنیم، و dao برای انجام عملیات مثلاً ذخیره، آپدیت، دیلیت و ... ، نیاز به دیتابیس داره که ما نیاز داریم به دیتابسمون که provide ش کردیم.
 
 هرچیزی که داریم provide (مثلاً database)میکنیم و میخوایم از اون توی چیز دیگه ایی (مثلاً dao) که وابسته اس به اون استفاده کنیم، باید از constructor ش استفاده کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image095.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image094.png)
 
 و ما میخوایم از dao استفاده کنیم که وابسته هستیم به database ، پس میایم و database مون(Note database) رو توی ورودی dao و بهش میدیم، که با db به متد note dao که داخل کلاس دیتابیس نوشته بودیم دسترسی داریم.
 
 بعد نیاز به entity داریم برای ذخیره اطلاعات.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image096.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image095.png)
 
 چون entity سنگین نیست ما میتونیم واسش از singleton استفاده نکنیم.
 
 ولی note model از ما مقدار پیشفرض میخواد error میده، چون میخواد تعریف بشه و نیاز به مقدار پیشفرض داره، ولی ما که نمیدونیم id, title ما با چه مقداری میخوان ذخیره بشن.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image097.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image096.png)
 
 بخاطر همین توی مدلمون یه مقدار پیشفرض براشون set میکنیم که فعلاً error رو برای ما نشون نده.
 
 وقتی که ما default value ست میکنیم میره برای ساختنشون از default value استفاده میکنه.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image098.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image097.jpg)
 
 ما اومدیم و وابستگی های کلاس دیتابیسمون رو درست کردیم.
 
@@ -627,13 +627,13 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 برای اینکه کدهامون شلوغ نشه یه package دیگه به اسم repository درست میکنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image099.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image098.png)
 
 میایم و کلاس db repository درست میکنیم.
 
 
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image100.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image099.png)
 
 این repository برای اینکه اطلاعات رو تامین کنه و در اختیار ما قرار بده نیاز به dao (note dao) داره، چون اطلاعات ما توسط note dao کنترل میشن مثلاً ذخیره، آپدیت، گرفتن، دیلیت و ... که داخل dao قرار داره و repository برای تامین این اطلاعات نیاز داره به dao دسترسی داشته باشه که اونو توی ورودی constructor repository قرار میدیم و میتونیم ازش استفاده کنیم.
 
@@ -641,7 +641,7 @@ repository یعنی میاد وظیفه ی تامین کردن اطلاعات م
 
 جاهایی که میخوایم ورودی و constructor داشته باشیم و اونو قبلاً تامین کردیم یا میخوایم تامین کنیم، نباید بیام مستقیماً داخل constructor و بعد براش ورودی set کنیم.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image101.jpg)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files2/image100.png)
 
 برای تزریق وابستگی میایم و قبل از سازنده یا constructor کلاس و از @inject استفاده میکنیم.
 
