@@ -1,9 +1,7 @@
 @font-face {
   font-family: 'vazir';
-  src: url('https://github.com/Developers0101/notes-android-course/raw/main/font/Vazir.ttf') format('ttf'),
-    url('https://github.com/Developers0101/notes-android-course/raw/main/font/Vazir.eot') format('eot'),
-    url('https://github.com/Developers0101/notes-android-course/raw/main/font/Vazir.woff') format('woff'),
-    url('https://github.com/Developers0101/notes-android-course/raw/main/font/Vazir.woff2') format('woff2');
+  src: url(https://fonts.gstatic.com/s/vazirmatn/v11/Dxx78j6PP2D_kU2muijPEe1n2vVbfJRklWgyCRWT7lDF.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
 body {
