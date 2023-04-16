@@ -485,7 +485,7 @@ Named : بجای Qualifiers میتونیم از Named استفاده کنیم ک
 
 اگه بیایم و مستقیم داخل ورودی context بدیم یعنی داریم دوباره وابستگی ایجاد میکنیم و درست نیست.
 
-![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image075.png)
+![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image075.jpg)
 
 ![My image](https://github.com/Developers0101/notes-android-course/raw/main/images/%D9%87%DB%8C%D9%84%D8%AA_files1/image076.png)
 
